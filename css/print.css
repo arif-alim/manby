@@ -1,0 +1,137 @@
+@media print {
+  .scroll-top-link {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  #slide-nav,
+  .WR_Footer,
+  .grid-nav-main-container {
+    display: none;
+  }
+
+  a:link,
+  a:visited,
+  a.btn-app-link,
+  a.btn-app-link:visited {
+    color: #005b66 !important;
+  }
+
+  .btn-app-border,
+  a.btn-app-border {
+    color: #0088d3;
+  }
+
+  div {
+    background-image: none;
+  }
+
+  img,
+  .content-box-img2 {
+    position: relative;
+    border: none;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    right: inherit;
+    top: inherit;
+  }
+
+  .content-box.mybill-padding-reset {
+    padding: 0px;
+    text-align: left;
+  }
+
+  .content-box-btn-bottom {
+    position: relative;
+    bottom: inherit;
+  }
+
+  .btn-lg,
+  .btn-app-common.white-button {
+    padding-left: 0px;
+    text-align: left;
+  }
+
+  section[class*='home-section'] {
+    display: block;
+    width: 100%;
+    overflow: inherit;
+    padding: 3.5% 0;
+    position: inherit;
+  }
+
+  .icon_list_1 li {
+    border: hidden;
+  }
+
+  .widget-box.content-box {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .ma-widget-block-padding .widget-header-link {
+    position: relative;
+  }
+
+  .navbar .navbar-brand.logo,
+  .pre-loader {
+    display: none !important;
+  }
+
+  .home-section7 .content-box {
+    margin: 0px;
+    overflow: inherit;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  .pre-loader-logo img {
+    display: none !important;
+  }
+
+  .tab-btn-container {
+    border: none;
+  }
+
+  .carousel-inner > .item {
+    display: block;
+  }
+  .common-section section {
+    display: block;
+  }
+  .main-banner {
+    display: none;
+  }
+  table {
+    border: solid #000 !important;
+    border-width: 1px 0 0 1px !important;
+  }
+  th,
+  td {
+    border: solid #000 !important;
+    border-width: 0 1px 1px 0 !important;
+  }
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-show {
+    display: block !important;
+  }
+  .print-inline {
+    float: left !important;
+    width: 33% !important;
+  }
+  .print-inline-right {
+    float: right !important;
+    width: 33% !important;
+  }
+}

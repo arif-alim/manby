@@ -1,0 +1,1728 @@
+<html>
+<!DOCTYPE html>
+
+<head>
+    <title>St.Clair Workarea</title>
+    <link rel="stylesheet" href="css/corev15.css">
+    <link rel="stylesheet" href="css/customwebparts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-custom.css">
+    <script src="https://kit.fontawesome.com/a9c99bc2bb.js"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pagelayouts.css">
+    <link rel="stylesheet" href="css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" href="css/wysdom.websearch.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/chat.css">
+    <!-- Custom styles by Jason -->
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script src="js/jquery.min.js"></script>
+    <!-- <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <p><a href="https://Hydroonemeeting.ca">Click here</a> at 7pm on March 9 & 10 to join our live discussions.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- DO NOT COPY - Exclude the Navigation -->
+    <div class="WR_Header navbar top-navigation"
+         role="navigation"
+         id="slide-nav">
+      <div class="header-container container">
+        <div class="navbar-header">
+          <a class="navbar-toggle"
+             tabindex="0"
+             href="javascript:void(0);"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                  class="icon-bar"></span><span class="icon-bar"></span><span class="text">Menu</span></a>
+          <a class="navbar-brand logo desktop-hide-logo"
+             href="/"
+             title="hydroone logo">
+            <img src="assets/hydroone-logo.svg"
+                 class="img-responsive"
+                 alt="hydroone">
+          </a>
+          <mobile-login-button ng-version="7.2.15"><a class="navbar-header-login desktop-hide-login"
+               title="login"
+               ng-reflect-ng-hide="false"><img alt="hydroone login"
+                   src="assets/hydroone-logo.svg"><span class="m-s-txt">Login</span></a>
+          </mobile-login-button>
+          <a class="navbar-header-search desktop-hide dropdown"
+             title="">
+            <span class="fa fa-search font-awesome-icon"
+                  data-toggle="dropdown">
+            </span><span class="m-s-txt">Search</span>
+            <span class="m-s-txt2">close</span>
+    
+            <ul class="dropdown-menu search-dropdown mobile">
+              <li>
+                <div class="search-content row">
+                  <div class="col-xs-12 col-md-12">
+                    <div class="input-group">
+                      <input class="form-control"
+                             placeholder="Search for..."
+                             type="text"
+                             id="mobileSearchBox">
+                      <span class="input-group-btn">
+                        <button class="btn btn btn-app-border mb-search-btn"
+                                type="button">search</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </a>
+        </div>
+    
+        <!-- ============== MEGA MENU - START  ================  -->
+        <top-menu ng-version="7.2.15">
+          <div>
+            <div id="slidemenu"><a class="slide-close"
+                 href=""
+                 id="slide-close-btn"
+                 tabindex="-1"><span class="sr-only">Toggle navigation</span><span class="close-btn"></span><span
+                      class="text">Menu</span></a><a class="navbar-brand logo"
+                 href="/"
+                 tabindex="-1"
+                 title="Welcome to Hydro One"><img alt="Welcome to Hydro One"
+                     class="img-responsive"
+                     src="assets/hydroone-logo.svg"></a>
+              <login-control>
+                <loading-indicator _nghost-vlr-c0=""
+                                   ng-reflect-loading="false">
+                  <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                </loading-indicator>
+                <div class="profile-pop"
+                     id="MyAccountMenuContainer">
+                  <div class="access-links"
+                       ng-reflect-klass="access-links"
+                       ng-reflect-ng-class="[object Object]"
+                       ng-reflect-ng-hide="false">
+                    <div class="text-center login-btn"><a class="link"
+                         href="#"
+                         id="comm-a-login">LOGIN</a>
+                      <hr class="separator"><a class="link"
+                         href="/register"
+                         id="comm-a-register">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="access-links ng-hide"
+                       data-toggle="dropdown"
+                       id="login-open"
+                       ng-reflect-klass="access-links"
+                       ng-reflect-ng-class="[object Object]"
+                       ng-reflect-ng-show="false">
+                    <div class="text-center"><a class="link log-icon"
+                         title="Login"><span class="icon icon-my-account"></span></a></div>
+                    <div class="text-center"><a class="link"
+                         href="/myaccount_/secure/"
+                         id="comm-a-my-account"><em>my</em>Account</a></div>
+                  </div>
+                  <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                </div>
+              </login-control>
+              <div class="row">
+                <div class="col-lg-12"><a class="highlighted-mobile"
+                     href="/request-a-service/"><span id="comm-span-request-service-mobile">Request a service</span></a>
+                </div>
+              </div>
+              <ul class="head-links">
+                <li class="visible-md visible-lg"><a class=""
+                     href="/about/"><span id="comm-span-abouth1">About Us</span></a></li>
+                <li class="visible-md visible-lg"><a class=""
+                     href="/sustainability/"><span id="comm-span-sustainability">Sustainability</span></a></li>
+                <li class="visible-md visible-lg"><a class=""
+                     href="/newsroom"><span id="comm-span-pay-bill">Newsroom</span></a></li>
+                <li><a class="highlighted"
+                     href="/request-a-service/"><span class="icon icon_power-white small"></span><i
+                       class="fa fa-comments font-awesome-icon"></i><span class="link-span"
+                          id="comm-span-request-service">Request a service</span></a></li>
+                <li class="map"><a class="highlighted"
+                     href="https://www.hydroone.com/stormcenter3"><span class="icon icon_power-white small"></span><i
+                       class="fa fa-comments"></i><span id="comm-span-outage">Outage <br>Map</span></a></li>
+                <li class="visible-md visible-lg dropdown site-search"><a class="highlighted search"
+                     data-toggle="dropdown"><span class="icon icon_power small"></span><span
+                          class="fa fa-search font-awesome-icon"></span><span class="link-highlighted-span link-span"
+                          id="comm-span-search"><label for="search"
+                             style="display:none;">Search</label><input class="form-control search-input"
+                             id="search"
+                             placeholder="Search"
+                             type="text"> Search </span></a>
+                  <ul class="dropdown-menu search-dropdown pull-right">
+                    <li>
+                      <div class="search-content row">
+                        <div class="col-md-8"
+                             id="search-type-ahead"><input autocapitalize="off"
+                                 autocorrect="off"
+                                 class="form-control ng-untouched ng-pristine ng-valid"
+                                 id="searchTags"
+                                 placeholder="start typing here..."
+                                 role="combobox"
+                                 type="text"
+                                 typeahead-prevent-submission="false"
+                                 ng-reflect-ngb-typeahead="function(l){return l.pipe(r.de"
+                                 autocomplete="off"
+                                 aria-autocomplete="list"
+                                 aria-expanded="false"></div>
+                        <div class="col-md-1"><button class="btn search-close no-border"
+                                  type="button"> ☓</button></div>
+                        <div class="col-md-3"><button class="btn btn-app-border fulwidth-btn no-border"
+                                  id="comm-btn-search"
+                                  type="button"> Search </button></div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right full main-nav">
+                <!--bindings={
+                  "ng-reflect-ng-for-of": "[object Object],[object Object"
+                }-->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                            <!---->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                            <!---->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                            <!---->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                            <!---->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                            <!---->
+                            <!---->
+                            <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/residential-services"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Residential
+                    Services<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span>
+                                  <img alt="icon: house with plug"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-03.svg"
+                                       style="width:70px;height:70px;margin-top:0px;margin-bottom:0px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Residential Services"
+                                   href="/residential-services">Residential Services</a>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span>
+                              <span class="view-icon">
+                                <i class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Seasonal Residents"
+                                     href="/residential-services/seasonal-residents">Seasonal Residents</a>
+                                </li>
+                                <li>
+                                  <a title="Working Safely at Home"
+                                     href="/residential-services/working-safely-at-home">Working Safely at Home</a>
+                                </li>
+                                <li>
+                                  <a title="Have You Been Disconnected?"
+                                     href="/residential-services/disconnection">Have You Been Disconnected?</a>
+                                </li>
+                                <li>
+                                  <a title="Financial Assistance"
+                                     href="/saving-money-and-energy/residential/financial-assistance">Financial
+                                    Assistance</a>
+                                </li>
+                                <li>
+                                  <a title="Electric Vehicle Buyer's Guide"
+                                     href="/residential-services/electric-vehicles">Electric Vehicle Buyer's Guide</a>
+                                </li>
+                                <li>
+                                  <a title="Indigenous Relations"
+                                     href="/about/indigenous-relations">Indigenous Relations</a>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span>
+                                  <img alt="icon: web page search"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-09.svg"
+                                       style="width:70px;height:70px;margin-top:0px;margin-bottom:0px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Find more in our FAQs"
+                                   href="/support">Find More</a>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span>
+                              <span class="view-icon">
+                                <i class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="View My Bill"
+                                     href="/login">View My Bill</a>
+                                </li>
+                                <li>
+                                  <a title="Understand My Bill"
+                                     href="https://understandmybill.ca/">Understand My Bill</a>
+                                </li>
+                                <li>
+                                  <a title="Report a Power Outage"
+                                     href="/power-outages-and-safety">Report a Power Outage</a>
+                                </li>
+                                <li>
+                                  <a title="Billing &amp; Payment Methods"
+                                     href="/rates-and-billing/billing-and-payments">Billing &amp; Payment Methods</a>
+                                </li>
+                                <li>
+                                  <a title="Move In/Move Out Requests"
+                                     href="/request-a-service/moving">Move In/Move Out Requests</a>
+                                </li>
+                                <li>
+                                  <a title="Unregistered Easements Database Search"
+                                     href="https://www.services.hydroone.com/lvr/welcome.html">Unregistered
+                                    Easements</a><br>
+                                </li>
+                              </ul>
+                            </div>
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/business-services"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Business
+                    Services<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: hands holding a dollar sign"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-06.svg"
+                                       style="margin-top:0px;margin-bottom:0px;width:70px;height:70px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Business Services"
+                                   href="/business-services">Business Services</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span>
+                              <span class="view-icon">
+                                <i class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Commercial/Industrial, Generators and Local Distribution Companies"
+                                     href="/business-services/commercial-industrial-generators-and-ldcs">Commercial/Industrial,
+                                    Generators and LDCs</a>
+                                </li>
+                                <li>
+                                  <a title="Links and Forms for Commercial/Industrial, Generators and LDCs"
+                                     href="/business-services/commercial-industrial-generators-and-ldcs/links-and-forms">Links
+                                    and Forms</a>
+                                </li>
+                                <li>
+                                  <a title="Farmers"
+                                     href="/business-services/farmers">Farmers</a>
+                                </li>
+                                <li>
+                                  <a title="Builders &amp; Contractors"
+                                     href="/business-services/builders-and-contractors">Builders &amp; Contractors</a><br>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: web page search"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-09.svg"
+                                       style="margin-top:0px;margin-bottom:0px;width:70px;height:70px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Find more in our FAQs"
+                                   href="/support">Find More</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span><span class="view-icon"><i
+                                   class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Outage Alerts"
+                                     href="/request-a-service/outage-alerts">Outage Alerts</a>
+                                </li>
+                                <li>
+                                  <a title="Retrofit Program"
+                                     href="/saving-money-and-energy/business/retrofit-program">Retrofit Program</a>
+                                </li>
+                                <li>
+                                  <a title="Request a Service"
+                                     href="/request-a-service">Request a Service</a>
+                                </li>
+                                <li>
+                                  <a title="Summary Billing"
+                                     href="/myaccount/summary-billing-signup">Summary Billing</a>
+                                </li>
+                                <li>
+                                  <a title="Net Metering"
+                                     href="/business-services/generators/net-metering">Net Metering</a><br>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/rates-and-billing"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Rates &amp;
+                    Billing<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: hydro bill"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-11.svg"
+                                       style="width:60px;height:60px;margin-top:5px;margin-bottom:5px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Rates &amp; Billing"
+                                   href="/rates-and-billing">Rates &amp; Billing</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span><span class="view-icon"><i
+                                   class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Understand Your Bill"
+                                     href="https://understandmybill.ca/">Understand Your Bill</a>
+                                </li>
+                                <li>
+                                  <a title="Rates &amp; Charges"
+                                     href="/rates-and-billing/rates-and-charges">Rates &amp; Charges</a>
+                                </li>
+                                <li>
+                                  <a title="Billing &amp; Payment Methods"
+                                     href="/rates-and-billing/billing-and-payments">Billing &amp; Payment Methods</a>
+                                </li>
+                                <li>
+                                  <a title="Meters"
+                                     href="/rates-and-billing/meters">Meters</a>
+                                </li>
+                                <li>
+                                  <a title="Activity Statement"
+                                     href="/rates-and-billing/billing-and-payments/customer-activity-statement">Activity
+                                    Statement</a><br>
+                                </li>
+                              </ul>
+                            </div>
+                            <br>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: web page search"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-09.svg"
+                                       style="width:70px;height:70px;margin-top:0px;margin-bottom:0px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Find more in our FAQs"
+                                   href="/support">Find More</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span>
+                              <span class="view-icon">
+                                <i class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="View Bill"
+                                     href="/login">View Bill</a>
+                                </li>
+                                <li>
+                                  <a title="Paperless Billing"
+                                     href="/rates-and-billing/billing-and-payments/paperless-billing">Paperless Billing</a>
+                                </li>
+                                <li>
+                                  <a title="Billing &amp; Payment Methods"
+                                     href="/rates-and-billing/billing-and-payments">Billing &amp; Payment Methods</a>
+                                </li>
+                                <li>
+                                  <a title="AutoPay"
+                                     href="/rates-and-billing/billing-and-payments/autopay">AutoPay</a>
+                                </li>
+                                <li>
+                                  <a title="High Usage Alert"
+                                     href="/rates-and-billing/billing-and-payments/high-usage-alert">High Usage
+                                    Alerts</a><br>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle active"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/saving-money-and-energy"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Saving Money
+                    &amp; Energy<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span>
+                                  <img alt="icon: Save energy at home"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-02.svg"
+                                       style="margin-top:0px;margin-bottom:0px;width:70px;height:70px;"></span>
+                              </div>
+                              <h2>
+                                <a title="For Homes"
+                                   href="/saving-money-and-energy/residential">For Homes</a><br>
+                              </h2>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="myEnergy Marketplace"
+                                     href="/saving-money-and-energy/residential/myenergymarketplace">myEnergy
+                                    Marketplace</a>
+                                </li>
+                                <li>
+                                  <a title="Financial Assistance"
+                                     href="/saving-money-and-energy/residential/financial-assistance">Financial
+                                    Assistance</a>
+                                </li>
+                                <li>
+                                  <a title="Fuel Switching"
+                                     href="/saving-money-and-energy/residential/fuel-switching">Fuel Switching</a>
+                                </li>
+                                <li>
+                                  <a title="Tips and Tools"
+                                     href="/saving-money-and-energy/residential/tips-and-tools">Tips and Tools</a><br>
+                                </li>
+                              </ul>
+                            </div>
+                            <br>
+                            <br>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: Save money for business"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-01.svg"
+                                       style="margin-top:0px;margin-bottom:0px;width:70px;height:70px;"></span>
+                              </div>
+                              <h2>
+                                <a title="For Business"
+                                   href="/saving-money-and-energy/business">For Business</a><br>
+                              </h2>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Programs and Incentives"
+                                     href="/saving-money-and-energy/business">Programs and Incentives</a><br><br>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/power-outages-and-safety"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Power Outages
+                    &amp; Safety<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span>
+                                  <img alt="icon: storm cloud with pin"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-08.svg"
+                                       style="margin-top:5px;margin-bottom:5px;width:60px;height:60px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Power Outages and Safety"
+                                   href="/power-outages-and-safety">Power Outages &amp; Safety</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span>
+                              <span class="view-icon">
+                                <i class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Outage Map"
+                                     href="https://stormcentre.hydroone.com/"
+                                     target="_blank">Outage Map</a>
+                                </li>
+                                <li>
+                                  <a title="Outage Tools"
+                                     href="/power-outages-and-safety/outage-tools">Outage Tools</a>
+                                </li>
+                                <li>
+                                  <a title="Corporate Health &amp; Safety"
+                                     href="/power-outages-and-safety/corporate-health-and-safety">Corporate Health &amp;
+                                    Safety</a>
+                                </li>
+                                <li>
+                                  <a title="What Happens When The Power Goes Out?"
+                                     href="/power-outages-and-safety/power-goes-out">When The Power Goes Out</a>
+                                </li>
+                                <li>
+                                  <a title="Life Support Notification"
+                                     href="/power-outages-and-safety/life-support-notification">Life Support
+                                    Notification</a>
+                                </li>
+                                <li>
+                                  <a title="Vegetation Management"
+                                     href="/about/corporate-information/vegetation-management">Vegetation Management</a><br>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: web page search"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-09.svg"
+                                       style="margin-top:0px;margin-bottom:0px;width:70px;height:70px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Find more in our FAQs"
+                                   href="/support">Find More</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span><span class="view-icon"><i
+                                   class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Outage Alerts"
+                                     href="/request-a-service/outage-alerts">Outage Alerts</a>
+                                </li>
+                                <li>
+                                  <a title="Damage Claims"
+                                     href="/power-outages-and-safety/damage-claims">Damage Claims</a>
+                                </li>
+                                <li>
+                                  <a title="Tree Trimming"
+                                     href="/request-a-service/tree-trimming">Tree Trimming</a>
+                                </li>
+                                <li>
+                                  <a title="Temporary Disconnect"
+                                     href="/request-a-service/temporary-disconnect">Temporary Disconnect</a>
+                                </li>
+                                <li>
+                                  <a title="Underground Cable Locate"
+                                     href="/request-a-service/underground-cable-locate">Underground Cable Locates</a><br>
+                                </li>
+                              </ul>
+                            </div><br>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "true"
+                }-->
+                <li class="dropdown"
+                    ng-reflect-ng-class="[object Object]"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     ng-reflect-klass="dropdown-toggle"
+                     ng-reflect-ng-class="[object Object]"
+                     href="/support"
+                     target="_self"><span class="hover-span"></span><span class="icon icon_power small"></span>Support
+                    Centre &amp; FAQs<span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a>
+                  <ul class="dropdown-menu full-width slidemenu-dropdown-menu">
+                    <li>
+                      <div class="row subnav-content">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;">
+                            <div class="sub-nav-header">
+                              <div class="sub-nav-header-head">
+                                <span><img alt="icon: mobile chat"
+                                       src="/PublishingImages/menu-icons/icon_vibrant-teal-04.svg"
+                                       style="margin-top:5px;margin-bottom:5px;width:60px;height:60px;"></span>
+                              </div>
+                              <h2>
+                                <a title="Support Centre &amp; FAQs"
+                                   href="/support">Support Centre &amp; FAQs</a><br>
+                              </h2>
+                              <span class="icon icon_power small header-icon"></span><span class="view-icon"><i
+                                   class="fa fa-angle-right"
+                                   aria-hidden="true"></i> </span>
+                            </div>
+                            <div class="sub-nav-content toggle-content">
+                              <ul>
+                                <li>
+                                  <a title="Frequently Asked Questions"
+                                     href="/support">Frequently Asked Questions</a>
+                                </li>
+                                <li>
+                                  <a title="Downloadable Forms &amp; Resources"
+                                     href="/support/forms">Forms &amp; Resources</a>
+                                </li>
+                                <li>
+                                  <a title="Contact Us"
+                                     href="/support/contact">Contact Us</a>
+                                </li>
+                                <li>
+                                  <a title="We're Here to Help"
+                                     href="/support/here-to-help">We're Here to Help</a><br><br>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                          <div class="sub-nav-wrapper toggle-parent"
+                               ng-reflect-klass="sub-nav-wrapper toggle-parent"
+                               ng-reflect-ng-class="[object Object]"
+                               ng-reflect-ng-style="[object Object]"
+                               style="background-image: none;"></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!---->
+                <!---->
+                <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                <!---->
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/about"><span class="hover-span"></span><span class="icon icon_power small"></span>About Us <span
+                          aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/careers"><span class="hover-span"></span><span class="icon icon_power small"></span>Careers
+                    <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/sustainability"><span class="hover-span"></span><span
+                          class="icon icon_power small"></span>Sustainability <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/investor-relations"><span class="hover-span"></span><span
+                          class="icon icon_power small"></span>Investor Relations <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/regulatory"><span class="hover-span"></span><span
+                          class="icon icon_power small"></span>Regulatory Affairs <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/newsroom"><span class="hover-span"></span><span class="icon icon_power small"></span>Newsroom
+                    <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/support/contact"><span class="hover-span"></span><span
+                          class="icon icon_power small"></span>Contact Us <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+                <li class="visible-nav dropdown"><a class="dropdown-toggle"
+                     data-toggle="dropdown"
+                     href="/francais"><span class="hover-span"></span><span class="icon icon_power small"></span>En Francais
+                    <span aria-hidden="true"
+                          class="fa fa-caret-right arrow"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </top-menu>
+        <!-- ============== MEGA MENU - END  ================  -->
+        <div class="navbar-height-col"></div>
+      </div>
+      <top-menu-secondary ng-version="7.2.15">
+        <section class="common-section secondary-nav">
+          <div class="navigation level1">
+            <div class="container">
+              <div class="row">
+                <ul>
+                  <!--bindings={
+                    "ng-reflect-ng-for-of": "[object Object],[object Object"
+                  }-->
+                  <li ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/residential"
+                       target="_self"><span>Energy Savings for Homes</span></a></li>
+                  <li class="active"
+                      ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/business"
+                       target="_self"><span>Energy Savings for Business</span></a></li>
+                  <li ng-reflect-ng-class="[object Object]"><a
+                       href="/saving-money-and-energy/residential/financial-assistance"
+                       target="_self"><span>Financial Assistance</span></a></li>
+                </ul>
+              </div>
+              <div class="navbar-height-col"></div>
+            </div>
+          </div>
+          <div class="navigation level2">
+            <div class="container">
+              <div class="row">
+                <ul>
+                  <!--bindings={
+                    "ng-reflect-ng-for-of": "[object Object],[object Object"
+                  }-->
+                  <li ng-reflect-ng-class="[object Object]"><a
+                       href="/saving-money-and-energy/residential/financial-assistance/connected-for-life"
+                       target="_self"><span>Connected for Life</span></a></li>
+                  <li class="active"
+                      ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/business"
+                       target="_self"><span>Programs and Incentives</span></a></li>
+                </ul>
+              </div>
+              <div class="navbar-height-col"></div>
+            </div>
+          </div>
+        </section>
+      </top-menu-secondary>
+    </div>
+
+    <!-- ///////////////////// End of Navigation /////////////////////////-->
+    
+    <section id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-lg-7">
+                    <div class="content" data-aos="fade-left">
+                        <div class="title-row">
+                            <h1>St. Clair Transmission Line</h1>
+                            <div class="details">
+                                <div class="stat">
+                                    <small>Expected Completion Date</small>
+                                    <strong>2026</strong>
+                                </div>
+                                <div class="stat">
+                                    <small>Current Project Phase</small>
+                                    <strong>Planning</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Energizing life for people and communities by building safer and more resilient communities.</h2>
+                        <!-- <div class="button-date">
+                            <a href="https://Hydroonemeeting.ca" class="btn btn-primary white">Register for Live Discussions</a>
+                            <div class="date">March 9 & 10 | 7 - 8 EST</div>
+                        </div> -->
+                        <p>
+                          To meet the growing demand for electricity in west and central Toronto, Hydro One is initiating a Class Environmental
+                          Assessment (Class EA) to rebuild a 115 kilovolt (kV) transmission line that is non-operational into a 230 kV line. This
+                          6.5 km line is located on the east side of an existing electrical corridor that extends between the Richview and Manby
+                          Transformer Stations in Etobicoke, see map below.
+                        </p>
+                        <p>
+                          This project has been identified by the Independent Electricity System Operator (IESO) to help meet the rapidly growing
+                          electricity demands of homes, businesses, and public transit initiatives in the City of Toronto. The IESO is the
+                          organization responsible for planning the province’s future energy needs.
+                        </p>
+                        <button style="color: var(--text); font-weight: bold; padding: 8px 20px; border-color: transparent">
+                          You're Invited to Participate in Community Open Houses
+                        </button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="contact-info">
+                        <h3>We're here to help you!</h3>
+                        <strong>
+                            Hydro One’s Community Relations
+
+                            <a href="mailto:Community.Relations@HydroOne.com">Community.Relations@HydroOne.com</a><br>
+                            <a href="tel:+1-877-345-6799">1-877-345-6799</a>
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="image">
+            <img src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/masthead.jpg"
+                alt="Mother and son watching TV together." />
+        </div>
+    </section>
+    <section id="intro">
+        <img src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/planning.jpg"
+                        alt="Mother and daughter using a tablet.">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-lg-8 pull-right">
+                    
+                    <div class="content">
+                        <h2>Planning Process</h2>
+                        <p>We are committed to listening and incorporating your feedback into the planning stages of the proposed new transmission line. An integral part of this project requires the completion of a <a href="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/classenvironmentalassessmentforminortransmissionfacilities/Documents/Class%20EA%20for%20Minor%20Transmission%20Facilities.pdf" target="_blank">Class Environmental Assessment (Class EA)</a>, in accordance with the Ontario Environmental Assessment Act. Rooted in community engagement and consultation, the Class EA will evaluate proposed alternative routes for the new line that minimize social, economic and environmental effects.</p>
+                        <p>Engagement with affected Indigenous communities, landowners, municipalities, government agencies, interest groups and others through opportunities like community open houses is critical to ensuring we work together to identify the best location for this needed electricity infrastructure. The St. Clair Transmission Line project supports local food supply and security, economic development, and job creation.</p>
+                        <p>Following completion of the Class EA, the project will also require Ontario Energy Board
+                            (OEB) approval under Section 92 (Leave to Construct) of the Ontario Energy Board Act.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="map">
+        <svg id="square" width="240" height="447" viewBox="0 0 240 447" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="163.5" width="327" height="327" transform="rotate(-30 0 163.5)" fill="#E3F7F1" fill-opacity="0.25"/>
+            </svg>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Map of Project Area and Route Alternatives</h2>
+                    <div class="d-flex">
+                    <p>View our interactive map showing the project area and the alternative routes identified for the project, which will be further evaluated in the environmental assessment.</p>
+                    <a href="https://ddei5-0-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2furldefense.proofpoint.com%2fv2%2furl%3fu%3dhttps%2d3A%5f%5fexperience.arcgis.com%5fexperience%5f770b90c559ad4619a186d955bf8798b1%5f%26d%3dDwMGaQ%26c%3dJnLCALisrKxQZnQdpANaBZUceEgEGD7wjEyj%5f%5f0JcDA%26r%3dqYWz5lbZQRosta0bOhjfNWcF2z2J0Lx9Sea3yKdpwMA%26m%3dARqWOAOISTAW4zpBpx3lXbdMuDWDrxPjqzGhlcDV%5fV851C4cc0xMqtY%2dAYTmnBEs%26s%3dynqOS7rsx1TlBA9HyI2S9A97yp%5fBMC47tf1x0thn9Jk%26e%3d&umid=79BD9062-D797-5305-9026-F621CFAC31D6&auth=7c4ba316753dc19277b4cd0bdedce6f0c8e9311b-b40439fa9a1e69bdd9f08fdea9aeac38da552a5d" target="_blank" class="btn btn-primary btn-lg">View our interactive map</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h3>Route Alternatives</h3>
+                    <p><a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/st_clair_route_alternatives.pdf">Click here</a> for more information on how route alternatives are identified.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-9">
+                    <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/SCTL_NoC_Map_Feb_8.pdf" target="_blank" class="map-link-large">
+                        <img src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/alt-routes-st-clair_feb_8.jpg" alt="Project Area Map">
+                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row" id="alternative-routes">
+                <div class="col-xs-12" id="accordion">
+                    <h4 class="accordion-toggle">
+                        <div>
+                            Detailed Route Alternative Maps
+                        </div>
+                        <div class="button"></div>
+                    </h4>
+                    <div class="accordion-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/All_Routes.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route1.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>All Routes</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_1.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route1.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>Route 1</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_2.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route2.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>Route 2</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_3.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route3.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>Route 3</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_4.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route4.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>Route 4</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_5.pdf" target="_blank" class="map-link-small">
+                                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route5.JPG" alt="Project Area Map">
+                                    <div class="content">
+                                        <h6>Route 5</h6>
+                                        <span class="arrow-btn">Enlarge (.PDF)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section id="open-house">            
+        <div class="container">
+            <div class="row image-text">
+                <div class="col-xs-12 col-md-6 col-lg-5 text">
+                    <h2>We want to hear from you</h2>
+                    <p>We invite you to join our upcoming virtual community open house to learn more about the project and provide your feedback. Our community open house will include a virtual tour followed by a live discussion. The virtual tour will exhibit project panels and an opportunity to contribute your input.</p>
+                    <a href="https://ddei5-0-ctp.trendmicro.com/wis/clicktime/v1/query?url=http%3a%2f%2fwww.SCTL%2dVirtualRoom.com&umid=5B0917C3-D694-CC05-9DAC-FD5632B0F096&auth=7c4ba316753dc19277b4cd0bdedce6f0c8e9311b-840a5b55ed468b4836c4baf6c38f2414feadb855" class="btn btn-primary">Enter Virtual Tour</a>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-7 image">
+                    <img src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/iStock-1058773298.jpg" alt="Community members talking amongst each other.">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    
+                    <!-- <p>To participate in the live discussions on Wednesday, March 9, 2022 and Thursday, March 10, 2022 from 7 – 8 p.m. EST, <a href="https://Hydroonemeeting.ca" target="_blank">register here</a> to view the presentation and speak with our project team members. You may also call <a href="tel:1-800-851-2595">1-800-851-2595</a> to listen to the presentation.</p> -->
+                    <p>To submit a question in advance, please email <a href="mailto:Community.Relations@HydroOne.com">Community.Relations@HydroOne.com</a></p>
+                    <!-- <div class="button-date">
+                    <a href="https://Hydroonemeeting.ca" target="_blank" class="btn btn-primary">Register for Live Discussions</a>
+                    <div class="date">March 9 & 10 | 7 - 8 EST</div>
+                    </div> -->
+                    <p>We want to hear from you during the environmental assessment process so we can design and build a line that respects the interests and needs of your community. We will continue to pan opportunities to engage with communities through the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="small-consultation">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-10">
+                    <div class="content">
+                        <h3>Public Consultation</h3>
+                        <div class="list-item">
+                        <h4>Notice of Commencement</h4>
+                        <p>February 2022</p>
+                        <div class="btn-group">
+                            <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/HONI_St_Clair_Notice_Feb_8.pdf" target="_blank" class="arrow-btn">Download the Notice of Commencement</a>
+                            <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/HONI_St_Clair_Ad_Feb_8.pdf" target="_blank" class="arrow-btn">Download the Newspaper Ad</a>
+                        </div>
+                        </div>
+                        <div class="list-item">
+                        <h4>Virtual Community Open House & Live Discussion Video Recordings</h4>
+                        <p>March 2022</p>
+                        <div class="btn-group">
+                            <a href="https://clientfiles.primecontact.ca/mavis/20220309-HydroOne-VTH-EventVideo.mp4" title="Click to watch the video recording of this event" target="_blank" class="arrow-btn">Wednesday, March 9th, 2022</a>
+                            <a href="https://clientfiles.primecontact.ca/mavis/20220310-Hydro-One-VTH-EventVideo.mp4" title="Click to watch the video recording of this event" target="_blank" class="arrow-btn">Thursday, March 10th, 2022</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="timeline">
+        <svg id="circle" width="235" height="430" viewBox="0 0 235 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="215" r="215" fill="#005B66" fill-opacity="0.025"/>
+            </svg>
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Anticipated Project Schedule</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-10 col-lg-8">
+                    <div class="timeline">
+                        <div class="milestone">
+                            <div class="date">February<br />2022</div>
+                            <div class="description">Notice of Commencement</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">February/March<br />2022</div>
+                            <div class="description">Virtual Community Open House #1; Introduction of Project</div>
+                        </div>
+                        <div class="milestone current">
+                            <div class="date">Fall<br />2022</div>
+                            <div class="description">Community Open House #2; Update on Project</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">Spring<br />2023</div>
+                            <div class="description">Community Open House #3; Selection of Preferred Route</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">Fall<br />2023</div>
+                            <div class="description">Release of draft Environmental Study Report (ESR); Report for 30-day review period</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">Late<br />2023</div>
+                            <div class="description">Submit final ESR and complete the Class EA process</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">Fall<br />2025</div>
+                            <div class="description">Expected Leave to Construct (Section 92) Application Approval</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">Spring<br />2027</div>
+                            <div class="description">Proposed Construction Start</div>
+                        </div>
+                        <div class="milestone">
+                            <div class="date">2028</div>
+                            <div class="description">Proposed Line in-service</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclude the Footer -->
+    <div id="wr-footer-div"
+         role="contentinfo">
+      <div class="h1-scroll-div">
+        <scroll-top ng-version="7.2.15"><a class="scroll-top-link"
+             id="back-to-top"><span class="fa fa-angle-up"></span></a></scroll-top>
+      </div>
+      <footer-secondary ng-version="7.2.15">
+        <section class="accordion-section hidden-lg footer_nav">
+          <div class="panel-group secondary-nav-accordion">
+            <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }-->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse"
+                     href="#collapse1"> &nbsp; Saving Money &amp; Energy <span class="indicator-text"
+                          ng-reflect-klass="indicator-text"
+                          ng-reflect-ng-class="[object Object]"><span class="expand-txt">More <span aria-hidden="true"
+                              class="font-awesome-icon fa fa-plus"></span></span><span class="collapse-txt">Less <span
+                              aria-hidden="true"
+                              class="font-awesome-icon fa fa-minus"></span></span></span></a></h4>
+              </div>
+              <div class="panel-collapse collapse"
+                   id="collapse1">
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <!--bindings={
+      "ng-reflect-ng-for-of": "[object Object],[object Object"
+    }-->
+                    <li class="list-group-item"
+                        ng-reflect-klass="list-group-item"
+                        ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/residential"><span>Energy
+                          Savings for Homes</span></a></li>
+                    <li class="list-group-item active"
+                        ng-reflect-klass="list-group-item"
+                        ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/business"><span>Energy
+                          Savings for Business</span></a></li>
+                    <li class="list-group-item"
+                        ng-reflect-klass="list-group-item"
+                        ng-reflect-ng-class="[object Object]"><a
+                         href="/saving-money-and-energy/residential/financial-assistance"><span>Financial
+                          Assistance</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }-->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse"
+                     href="#collapse2"> &nbsp; Energy Savings for Business <span class="indicator-text"
+                          ng-reflect-klass="indicator-text"
+                          ng-reflect-ng-class="[object Object]"><span class="expand-txt">More <span aria-hidden="true"
+                              class="font-awesome-icon fa fa-plus"></span></span><span class="collapse-txt">Less <span
+                              aria-hidden="true"
+                              class="font-awesome-icon fa fa-plus"></span></span></span></a></h4>
+              </div>
+              <div class="panel-collapse collapse"
+                   id="collapse2">
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <!--bindings={
+      "ng-reflect-ng-for-of": "[object Object],[object Object"
+    }-->
+                    <li class="list-group-item"
+                        ng-reflect-klass="list-group-item"
+                        ng-reflect-ng-class="[object Object]"><a
+                         href="/saving-money-and-energy/residential/financial-assistance/connected-for-life"><span>Connected
+                          for Life</span></a></li>
+                    <li class="list-group-item active"
+                        ng-reflect-klass="list-group-item"
+                        ng-reflect-ng-class="[object Object]"><a href="/saving-money-and-energy/business"><span>Programs and
+                          Incentives</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer-secondary>
+      <footer-primary ng-version="7.2.15">
+        <div class="WR_Footer"
+             id="wr-footer-div-WR">
+          <!--bindings={
+      "ng-reflect-ng-for-of": ""
+    }-->
+          <div>
+            <div>
+              <div class="Footer_Top_Section">
+                <!-- ==== Footer Row 1 ==== -->
+                <div class="Footer_Top_Row_1 container">
+                  <div class="row Footer_row1">
+                    <div class="col-xs-12 col-sm-12 col-md-8 item1">
+                      <h1>More from Hydro One</h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 item2">
+                    </div>
+                  </div>
+                  <!-- ==== Footer links ==== -->
+                  <div class="Footer_Links">
+                    <div class="row">
+                      <!-- Footer Links - Column 1 -->
+                      <div class="col-xs-12 col-sm-5 col-md-5 footer-main-col hidden-xs hidden-sm">
+                        <div class="row">
+                          <h3>Manage your monthly bill</h3>
+                          <ul class="footer_list">
+                            <li><a href="/rates-and-billing/billing-and-payments/paperless-billing"
+                                 title="Sign Up for Paperless Billing">Sign Up for Paperless Billing</a></li>
+                            <li><a href="/rates-and-billing/rates-and-charges/electricity-pricing-and-costs"
+                                 title="View Time-of-Use Rates">View Time-of-Use Rates</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Footer Links - Column 1 -->
+                      <!-- Footer Links - Column 2 -->
+                      <div class="col-xs-12 col-sm-12 col-md-4 footer-main-col ">
+                        <div class="row">
+                          <h3 class="hidden-xs hidden-sm">Stay updated</h3>
+                          <ul class="footer_list">
+                            <li><a href="/request-a-service/outage-alerts"
+                                 title="Sign Up for Outage Alerts">Sign Up for Outage Alerts </a></li>
+                            <li class="hidden-xs hidden-sm"><a
+                                 href="/rates-and-billing/billing-and-payments/high-usage-alert"
+                                 title="Learn about High Usage Alerts">Learn About High Usage Alerts </a></li>
+                            <li><a href="https://stormcentre.hydroone.com/"
+                                 title="View our Outage Map">View Our Outage Map</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- /Footer Links - Column 2 -->
+                      <!-- Footer Links - Column 3 -->
+                      <div class="col-xs-12 col-sm-12 col-md-3 footer-main-col ">
+                        <div class="row">
+    
+    
+                          <style>
+                            .Footer_Social_Icons a:link,
+                            .Footer_Social_Icons a:visited {
+    
+                              margin: 0px 3px;
+                            }
+    
+                            div.footer-main-col:last-child {
+                              padding: 0;
+                            }
+                          </style>
+    
+                          <div class="Footer_Social_Icons">
+                            <a href="https://twitter.com/HydroOne"
+                               target="_blank"
+                               title="Twitter"
+                               class="social-twitter"><img src="assets/icons/twitter-icon.svg"
+                                   alt="Twitter icon"
+                                   aria-hidden="true"></a>
+                            <a href="https://www.facebook.com/HydroOneOfficial"
+                               target="_blank"
+                               title="Facebook"><img src="assets/icons/facebook-icon.svg"
+                                   alt="Twitter icon"
+                                   aria-hidden="true"></a>
+                            <a href="https://www.instagram.com/hydrooneofficial"
+                               target="_blank"
+                               title="Instagram"><img src="assets/icons/instagram-icon.svg"
+                                   alt="Twitter icon"
+                                   aria-hidden="true"></a>
+                            <a href="https://ca.linkedin.com/company/hydro-one"
+                               target="_blank"
+                               title="LinkedIn"><img src="assets/icons/linkedin-icon.svg"
+                                   alt="Twitter icon"
+                                   aria-hidden="true"></a>
+                            <a href="https://www.youtube.com/c/hydroonechannel"
+                               target="_blank"
+                               title="Youtube"
+                               class="social-youtube"><img src="assets/icons/youtube-icon.svg"
+                                   alt="Twitter icon"
+                                   aria-hidden="true"></a>
+                          </div>
+    
+    
+                          <!-- Commented out the Sustainable Logo/<button class="btn btn-default btn-ash-big" type="button">Sustainable Logo FPO</button> -->
+                        </div>
+                      </div>
+                      <!-- /Footer Links - Column 3 -->
+                    </div>
+                  </div>
+                  <!-- ==== /Footer links ==== -->
+                </div>
+                <!-- ==== Footer Row 1 ==== -->
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="Footer_Bottom_Section">
+                <!-- ==== Footer Row 2 ==== -->
+                <div class="Footer_Top_Row_2">
+                  <div class="container">
+                    <ul class="footer_list_2">
+                      <li><a href="/careers/"
+                           title="Careers">Careers</a></li>
+                      <li><a href="/investor-relations"
+                           title="Investor Relations">Investor Relations</a></li>
+                      <li><a href="/about/regulatory"
+                           title="Regulatory Affairs">Regulatory Affairs</a></li>
+                      <li><a href="/newsroom"
+                           title="Newsroom">Newsroom</a></li>
+                      <li><a href="/support/contact"
+                           title="Contact Us">Contact Us</a></li>
+                      <li><a href="/employee-updates"
+                           title="Employee Hub">Employee Hub</a></li>
+                      <li><a href="/Francais"
+                           title="En Français">En Français</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- ====Footer Row 2 ==== -->
+                <div class="container">
+                  <!-- footer bottom links -->
+                  <div class="Footer_Bottom_Section_Links">
+                    <ul class="footer_list_3">
+                      <li><a href="/privacy-and-cookies"
+                           title="Privacy and Cookies">Privacy &amp; Cookies</a></li>
+                      <li><a href="/terms-of-use"
+                           title="Terms of Use">Terms of Use</a></li>
+                      <li><a href="/about/corporate-social-responsibility/accessibility"
+                           title="Accessibility">Accessibility</a></li>
+                      <li><a href="/sitemap"
+                           title="Site Map">Site Map</a></li>
+                    </ul>
+                  </div>
+                  <!-- footer bottom links -->
+                  <!-- footer bottom text -->
+                  <div class="Footer_Bottom_Section_Note">
+                    <p>
+                      2009-2022 Hydro One Networks Inc.
+                      <br> All rights reserved.
+                    </p>
+                  </div>
+                  <!-- footer bottom text -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer-primary>
+      <env-ctrl class="footer-env-lbl"
+                id="envName"
+                ng-version="7.2.15"></env-ctrl>
+    
+      <need-help ng-version="7.2.15">
+        <div class="h1-hydrochat">
+          <div class="h1-chat chat_fullscreen"
+               ng-reflect-klass="h1-chat chat_fullscreen"
+               ng-reflect-ng-class="[object Object]">
+            <div class="h1-chat-head clearfix"
+                 id="h1-chat-header-id"
+                 ng-reflect-klass="h1-chat-head clearfix"
+                 ng-reflect-ng-class="[object Object]">
+              <div class="h1-chat-head-left pull-left"><img alt="Help header image"
+                     class="img-fluid h1-chat-header-ico"
+                     src="/Style Library/H1/images/chat/help-header.svg"><span class="h1-chat-need-help"
+                      id="h1-chat-need-help-id">Contact Us</span></div>
+              <div class="h1-chat-head-right pull-right"
+                   ng-reflect-klass="h1-chat-head-right pull-right"
+                   ng-reflect-ng-class="[object Object]"><a aria-label="Download transcript"
+                   class="h1-chat-download-btn ng-hide"
+                   href="#"
+                   id="h1-chat-download-btn-id"
+                   title="Download transcript"
+                   ng-reflect-ng-show="false"><img alt="Download transcript icon"
+                       src="/Style Library/H1/images/chat/download-arrow-head.svg"></a><a aria-label="Minimise"
+                   class="h1-chat-cloase-btn"
+                   href="#"
+                   id="h1-chat-minimize-btn-id"
+                   title="Minimise"><img alt="Minimise"
+                       src="/Style Library/H1/images/chat/minimize.svg"></a><a aria-label="Close"
+                   class=""
+                   href="#"
+                   id="h1-chat-close-btn-id"
+                   title="Close"><img alt="Close"
+                       src="/Style Library/H1/images/chat/close.svg"></a></div>
+            </div>
+            <div class="h1-chat-body"
+                 id="h1-chat_body">
+              <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }-->
+              <div class="h1-chat-screen"
+                   id="h1-chat_screen_1">
+                <div class="h1-chat-header">
+                  <h1 class="h1-chat-heading"
+                      id="h1-chat-heading-id">Hours of Operation</h1>
+                  <div class="h1-chat-open-time">
+                    <!--bindings={
+      "ng-reflect-ng-if": "Monday to Friday 07:30 AM - 08"
+    }-->
+                    <div>Monday to Friday 07:30 AM - 08:00 PM EST</div>
+                    <!--bindings={
+      "ng-reflect-ng-if": null
+    }-->
+                    <!--bindings={
+      "ng-reflect-ng-if": null
+    }-->
+                  </div>
+                </div>
+                <div class="h1-chat-category-list">
+                  <ul>
+                    <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }-->
+                    <li><a class="h1-chat-disable"
+                         href="#"
+                         id="h1-chat_2"
+                         ng-reflect-klass=""
+                         ng-reflect-ng-class="[object Object]"
+                         disabled="true"><span class="h1-chat-icon h1-chat-icon-conv"></span>
+                        <div class="h1-chat-description">
+                          <div id="h1-chat-description-id"><strong>Chat with us</strong></div>
+                          <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                          <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                          <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }--><span class="col-md-12 h1-chat-preloader-cat"><svg xml:space="preserve"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 enable-background="new 0 0 0 0"
+                                 id="h1-chat-preloader-chat"
+                                 version="1.1"
+                                 viewBox="0 0 100 100"
+                                 x="0px"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 y="0px">
+                              <circle cx="6"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.1"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                              <circle cx="26"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.2"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                              <circle cx="46"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.3"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                            </svg></span>
+                        </div>
+                      </a></li>
+                    <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }-->
+                    <li><a href="#"
+                         ng-reflect-ng-class="[object Object]"
+                         disabled="false"><span class="h1-chat-icon h1-chat-icon-phone"></span>
+                        <div class="h1-chat-description">
+                          <div><strong>Reach us by phone</strong></div>
+                          <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                          <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                          <!--bindings={
+      "ng-reflect-ng-if": "true"
+    }--><span class="col-md-12 h1-chat-preloader-cat"><svg xml:space="preserve"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 enable-background="new 0 0 0 0"
+                                 id="h1-chat-preloader-phone"
+                                 version="1.1"
+                                 viewBox="0 0 100 100"
+                                 x="0px"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 y="0px">
+                              <circle cx="6"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.1"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                              <circle cx="26"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.2"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                              <circle cx="46"
+                                      cy="50"
+                                      fill="#363F48"
+                                      r="6"
+                                      stroke="none">
+                                <animate attributeName="opacity"
+                                         begin="0.3"
+                                         dur="1s"
+                                         repeatCount="indefinite"
+                                         values="0;1;0"></animate>
+                              </circle>
+                            </svg></span>
+                        </div>
+                      </a></li>
+                    <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+                  </ul>
+                </div>
+              </div>
+              <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+              <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+              <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+            </div>
+          </div>
+          <div class="h1-chat-btn-wrapper print-hide"><a class="h1-chat-btn"
+               id="h1-chat-prime"
+               role="button"
+               tabindex="0"
+               ng-reflect-klass="h1-chat-btn"
+               ng-reflect-ng-class="[object Object]"><img alt="Need Help?"
+                   src="assets/icons/help.svg"></a><span class="h1-sp-text">Contact us</span></div>
+        </div>
+      </need-help>
+    
+    </div>
+
+    <!-- //////////////////// END OF FOOTER ////////////////// -->
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#accordion').find('.accordion-toggle').click(function () {
+
+                //Expand or collapse this panel
+                $(this).next().slideToggle('fast');
+                $(this).toggleClass('active');
+                $(this).next().toggleClass('active');
+                //Hide the other panels
+                $(".accordion-content").not($(this).next()).slideUp('fast');
+                $(".accordion-toggle").not($(this)).removeClass('active');
+                $(".accordion-content").not($(this).next()).removeClass('active');
+            });
+            // $('#accordion .accordion-toggle:first-of-type').trigger("click");
+        });
+    </script>
+</body>
+
+</html>

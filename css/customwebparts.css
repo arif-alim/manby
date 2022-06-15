@@ -1,0 +1,951 @@
+/*****************************************
+              GENERAL STYLES
+ *****************************************/
+
+/*****************************************
+          TIMELINE WEBPART STYLES
+ *****************************************/
+
+.timeline-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* Typography */
+.timeline-title,
+.tl-step-title,
+.tl-date {
+  font-family: 'futura-pt', 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.tl-panel-title {
+  font-family: futura-pt;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/* Timeline Title */
+h1.timeline-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.tl-panel-title {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.tl-panel-copy {
+  font-family: canada-type-gibson;
+  font-size: 17px;
+  font-weight: normal;
+  height: 56px;
+  letter-spacing: normal;
+  line-height: 28px;
+}
+
+.tl-step-title {
+  font-weight: bold;
+}
+
+/* timeline div */
+#timeline {
+  list-style: none;
+  position: relative;
+  margin: 2rem auto;
+}
+
+/* vertical line */
+/*#timeline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin-top: 2rem;
+  left: 50%;
+  width: 4px;
+  background: darkgray;
+  height: 87%;
+  margin-left: -1.5px;
+  background-color: #4997cd;
+  background: #d7e4ed;
+   background: #ed0000;
+  z-index: -1;
+}*/
+
+.col-xs-6.col-sm-6.timeline-item:nth-of-type(odd)::before {
+  content: '';
+  display: block;
+  top: 2rem;
+  bottom: 0;
+  /* margin-top: 2rem; */
+  left: 100%;
+  width: 4px;
+  background: darkgray;
+  height: 100%;
+  /* margin-left: -1.5px; */
+  /* background-color: #4997cd; */
+  /* background: #d7e4ed; */
+  /* background: #ed0000; */
+  /* z-index: -1; */
+  position: absolute;
+}
+
+.col-xs-6.col-sm-6.timeline-item.last-one::before {
+  position: relative;
+}
+
+/*.timeline-steps:before {
+  bottom: 26% !important;
+}*/
+
+#timeline .clearFix {
+  clear: both;
+  height: 0;
+}
+
+#timeline .timeline-dot {
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  border: solid 5px darkgray;
+  width: 22px;
+  height: 22px;
+  font-size: 1.2rem;
+  text-align: center;
+  position: absolute;
+  top: 2rem !important;
+  left: 49.2%;
+  /*margin-left: -25px;*/
+  background-color: white;
+  z-index: 2;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+/* LAST TIMELINE DOT! */
+/* For when accordion and/or "show more" button will not be used on your page! */
+.last-dot {
+  border: solid 5px #cc0012 !important;
+  bottom: 0 !important;
+}
+
+.timeline-filter-movement {
+  background-color: #ffffff;
+  font-size: 1.7em;
+  height: 35px;
+  margin-left: -18px;
+  width: 35px;
+  top: 40px;
+}
+
+.timeline-filter-movement a span {
+  color: #4997cd;
+  font-size: 1.3em;
+  top: -1px;
+}
+
+.timeline-future-movement {
+  background-color: #ffffff;
+  height: 35px;
+  width: 35px;
+  font-size: 1.7em;
+  top: -16px;
+  margin-left: -18px;
+}
+
+.timeline-future-movement a span {
+  color: #4997cd;
+  font-size: 0.9em;
+  top: 2px;
+  left: 1px;
+}
+
+.timeline-movement {
+  /*border-bottom: dashed 1px #4997cd;*/
+  position: relative;
+}
+
+.timeline-movement-top {
+  height: 60px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+}
+
+.timeline-panel {
+  border: 1px solid #d4d4d4;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  color: #666;
+  padding: 0.5rem 1.75rem 1.5rem;
+  position: relative;
+  /*-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);*/
+}
+
+.timeline-panel-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-left .timeline-panel-ul {
+  text-align: right;
+}
+
+.timeline-right .timeline-panel-ul {
+  text-align: left;
+}
+
+.timeline-panel-ul li {
+  color: #666;
+}
+
+/*** timeline accordion styles ***/
+.tl-accordion {
+  display: none;
+}
+
+.tl-reveal {
+  display: block;
+}
+
+.btn-contain {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tl-show-more {
+  border: none;
+  padding: 1rem 5rem;
+  color: #fff;
+  background: darkgrey;
+  /*margin: 1.5rem auto 0;*/
+  transition: all 0.5s ease;
+}
+
+.tl-show-more:hover,
+.tl-show-more:focus {
+  /*transform: scale(1.15);*/
+  background: dimgray;
+}
+
+/**** timeline-steps.html styles ****/
+.tl-step-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.tl-date {
+  padding: 1.25rem;
+  display: inline-block;
+  background: #444;
+  /*display: none;*/
+  text-align: center;
+}
+
+.tl-date span {
+  text-transform: uppercase;
+  display: block;
+  color: white;
+  letter-spacing: 1px;
+  padding: 0 1.5rem;
+}
+
+.tl-month,
+.tl-year {
+  font-size: 1.5rem;
+}
+
+.tl-day {
+  font-size: 3rem;
+}
+
+/****************************************
+       RATES & BILLING WEBPART STYLES
+ ****************************************/
+
+.webpart-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  /*  background: #f5f5f5;*/
+  padding: 20px 30px;
+}
+
+.ratesbill-wrapper {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Typography */
+.cost-title,
+/*.picture-caption,*/
+/*.kilowatt-hours,
+.flat-cost,*/
+/*.regulatory-headings,*/
+.learn-more,
+.delivery-title,
+.regulatory-title,
+.density-title,
+.general-title,
+.demand-title,
+.charge-column,
+.com-charge-column,
+.cost-column > p,
+.all-the-footnotes > p {
+  font-family: 'futura-pt', 'Arial', sans-serif;
+  /*color: #333;*/
+}
+
+.density-title,
+.general-title,
+.demand-title,
+.charge-column,
+.com-charge-column {
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 1.45rem;
+}
+
+.general-title,
+.demand-title,
+.density-title {
+  color: #cc0012;
+}
+
+.charge-column,
+.com-charge-column {
+  /*  font-size: 1.5rem;*/
+  /*  padding: 0 0.5rem;*/
+  color: #444;
+}
+
+.com-charge-column,
+.charge-column {
+  margin: 0;
+}
+
+.cost-column {
+  margin-bottom: 0.5rem;
+}
+
+.cost-column > p {
+  /*font-weight: bold;*/
+  color: #333;
+  padding: 0.5rem 0;
+  font-size: 1.65rem;
+  margin-bottom: 0;
+}
+
+.cost-column > p > span,
+.demand-title > span {
+  display: none;
+}
+
+.cost-column > p > span {
+  /*font-weight: bold;*/
+  color: gray;
+}
+
+.the-footnote {
+  /*  font-size: 2rem !important;*/
+  font-style: italic;
+}
+
+.cost-column:last-of-type {
+  border: none;
+}
+
+.cost-title,
+.delivery-title,
+.regulatory-title,
+.total-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cost-title {
+  display: inline-block;
+}
+
+.delivery-title,
+.regulatory-title,
+.total-title {
+  /*  font-size: 1.75rem;*/
+  /*margin-bottom: 1.5rem;*/
+  text-align: center;
+  color: white;
+  background: #444444;
+  /*background: #cc0012;*/
+  padding: 1.5rem 0;
+  letter-spacing: 1px;
+  font-weight: inherit;
+}
+
+/*makes sure delivery/regulatory titles aren't wonky!*/
+.commercial,
+.residential,
+.delivery-contain,
+.regulatory-contain {
+  /*float: left;*/
+}
+
+.picture-caption,
+.cost-type-title {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.delivery-contain,
+.regulatory-contain {
+  /*border-bottom: 3px solid;*/
+}
+
+/*.flat-cost {
+  position: relative;
+  font-weight: bold;
+  font-size: 4.5em;
+  text-align: center;
+  padding: 0.5em 0 0.75em 0;
+}*/
+
+/*.flat-cost span {
+  position: absolute;
+  top: 40%;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}*/
+
+/*.flat-cost,
+.kilowatt-hours,
+.delivery-headings,
+.regulatory-headings,*/
+.cost-contain {
+  border-bottom: solid 3px darkgray;
+}
+
+.flat-cost:last-of-type,
+.kilowatt-hours:last-of-type,
+/*.delivery-headings:last-of-type,*/
+.regulatory-headings:last-of-type,
+.cost-contain:last-of-type {
+  border-bottom: none;
+}
+
+/* New Column Styles */
+.delivery-headings {
+  display: block;
+  font-size: 1.15em;
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.regulatory-headings {
+  font-size: 1.25em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1.75em 0;
+}
+
+/*.kilowatt-hours {
+  font-size: 2.25em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0.5em 0;
+}
+
+.kilowatt-hours sup,
+.kilowatt-hours sub {
+  font-size: 0.5em;
+}*/
+
+/* Drop down dynamic switch */
+#HydroDropDown .dropdown-section {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#HydroDropDown .dropdown-section p {
+  display: inline-block;
+}
+
+#HydroDropDown .dropdown-section .dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+#HydroDropDown .dropdown-section button#dropdownMenu1 {
+  z-index: 2;
+  border-radius: 20px;
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0.5rem 4rem;
+  letter-spacing: 1px;
+  position: relative;
+  top: -5px;
+}
+
+.dropdown-container ul {
+  position: absolute;
+  left: 12%;
+  /*  padding: 0 3rem;*/
+}
+
+.dropdown-container ul li {
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.dropdown-container ul li a {
+  padding: 1rem 4rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-container ul li a:hover {
+  background: lightgrey;
+}
+
+.learn-more {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#HydroDropDown > div.col-md-12.learn-more {
+  clear: both;
+}
+
+.learn-more a button {
+  border: none;
+  color: #fff;
+  background: #cc0012;
+  padding: 1.25rem 3rem;
+  font-size: 1.65rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.learn-more a button:hover,
+.learn-more a button:focus {
+  background: white;
+  color: #cc0012;
+  font-weight: bolder;
+  border: 3px solid #cc0012;
+}
+
+/*.learn-more a:hover {
+  text-decoration: none;
+}*/
+
+.delivery-contain,
+.regulatory-contain {
+  margin-bottom: 0.5rem;
+}
+
+.cost-column {
+  text-align: center;
+  /*border-right: solid 3px darkgray;*/
+  /*margin-bottom: 3.5rem;*/
+}
+
+.cost-column:first-of-type {
+  text-align: left;
+}
+
+.cost-column > h4 > sup,
+.cost-column > p > span.noted {
+  display: inline-block;
+  color: #cc0012;
+}
+
+.com-two-lines,
+.res-two-lines {
+  margin-bottom: 1.15rem;
+}
+
+#HydroDropDown > section.residential > div > div:nth-child(4),
+#HydroDropDown > section.commercial > div > div:nth-child(4) {
+  border: none;
+}
+
+#HydroDropDown img {
+  display: inline-block;
+}
+
+/****** Footnotes! ******/
+
+.all-the-footnotes > p {
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.all-the-footnotes > p > sup,
+.all-the-footnotes > p > span {
+  color: #cc0012;
+}
+
+.all-the-footnotes > p > sup {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*****************************************
+        RESPONSIVE CONTAINER STYLES
+ *****************************************/
+
+#responsive-columns {
+  /*  text-align: center;*/
+  overflow: hidden;
+}
+
+.res-column {
+  padding: 0 3rem;
+  margin: 10px auto;
+}
+
+.res-column h2 {
+  font-size: 3rem;
+  font-family: 'futura-pt', 'Arial', sans-serif;
+}
+
+.res-column p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'Gibson', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* FOR 5-COLUMNS */
+.col-xs-five,
+.col-sm-five,
+.col-md-five,
+.col-lg-five {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-five {
+  width: 20%;
+  float: left;
+}
+
+.residential > .delivery-contain > .cost-column:not(:first-child),
+.residential > .regulatory-contain > .cost-column:not(:first-child) {
+  width: 19.4%;
+}
+
+/*****************************************
+         ****** MEDIA QUERIES ******
+ *****************************************/
+
+/* Large Devices, Wide Screens */
+@media (min-width: 1200px) {
+  /*** 5-Column Container Webpart ***/
+  .col-lg-five {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  /* .residential > .delivery-contain > .cost-column:not(:first-child),
+.residential > .regulatory-contain > .cost-column:not(:first-child) {
+  width: auto;
+}*/
+}
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+  /*** General Bootstrap Styles ***/
+  /*  .col-md-5 {
+    width: 20%;
+    float: left;
+  }*/
+
+  /*** RATES & BILLING WEBPART ***/
+  /*  .flat-cost {
+    font-size: 4.15em;
+    padding: 0.25em 0 0.25em 0;
+  }*/
+
+  /*  .flat-cost span {
+    position: absolute;
+    top: 40%;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }*/
+
+  /*  .kilowatt-hours {
+    font-size: 2.15em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.75em 0;
+  }*/
+
+  /*** 5-Column Container Webpart ***/
+  .col-md-five {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  /*** RESPONSIVE CONTAINERS ***/
+  /* six columns */
+  #responsive-columns > div {
+    padding-bottom: 1000em;
+    margin-bottom: -1000em;
+  }
+}
+
+@media (min-width: 992px) {
+  /*** 5-Column Container Webpart ***/
+  .col-md-five {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /**** TIMELINE ***/
+  #timeline .timeline-dot {
+    left: 49.1%;
+  }
+
+  /*** RATES & BILLING WEBPART ***/
+  /* Typography */
+  .charge-column {
+    margin: 0;
+    /*    font-size: 1.75rem;*/
+    padding: 0;
+  }
+}
+
+/* Small Devices, Tablets */
+@media (min-width: 768px) {
+  /*** 5-Column Container Webpart ***/
+  .col-sm-five {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /*  .density-title {
+    font-size: 1.75rem;
+  }*/
+
+  .tl-panel-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /*** 5-Column Container Webpart ***/
+  .hidden-sm {
+    display: none;
+  }
+
+  .webpart-wrapper {
+    padding: 0;
+  }
+
+  /*** TIMELINE ***/
+  .timeline-left {
+    margin-right: 1.5rem;
+  }
+
+  .timeline-right {
+    margin-left: 1.5rem;
+  }
+
+  #timeline .timeline-dot {
+    border: solid 4px darkgray;
+    width: 22px;
+    height: 22px;
+    left: 48.5%;
+  }
+
+  /*** RATES & BILLING WEBPART ***/
+  /* Typography */
+
+  .charge-column,
+  .com-charge-column {
+    margin: 0;
+    /*    font-size: 1.75rem;*/
+    padding: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .com-charge-column {
+    color: #444;
+  }
+
+  /*  .cost-column > p {
+    font-size: 2rem;
+    margin: 0;
+  }*/
+
+  /* Turns Urban Demand/Demand titles into a legend! */
+  .cost-column > p > span,
+  .demand-title > span {
+    display: inline-block;
+  }
+
+  .demand-title {
+    /*margin-top: 0;*/
+    /*padding-left: 2rem;*/
+    font-size: 1.5rem;
+    /*    color: #cc0012;*/
+    /* margin-bottom: 2rem;*/
+  }
+
+  .delivery-title,
+  .regulatory-title {
+    /*    font-size: 2rem;*/
+    line-height: 1.5;
+  }
+
+  /*.general-title,
+  .com-charge-column,
+  .charge-column {
+    text-align: center;
+  }
+*/
+  /*  .the-footnote {
+    font-size: 1.25rem;
+  }*/
+
+  /*  .flat-cost {
+    font-size: 3.15em;
+    padding: 0.25em 0 0.25em 0;
+  }
+
+  .kilowatt-hours {
+    font-size: 2.15em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.25em 0;
+  }*/
+
+  /*  .total-contain > .cost-column {
+    border-right: none;
+    border-bottom: 3px solid darkgray;
+  }*/
+
+  .learn-more {
+    margin-top: 1.5em;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**** TIMELINE ***/
+  .tl-panel-title {
+    font-size: 1.25rem;
+  }
+
+  .timeline-panel {
+    padding: 1rem;
+  }
+
+  .timeline-left {
+    margin-right: 1.5rem;
+  }
+
+  .timeline-right {
+    margin-left: 1.5rem;
+  }
+
+  #timeline .timeline-dot {
+    border: solid 4px darkgray;
+    width: 22px;
+    height: 22px;
+    left: 47.5%;
+  }
+
+  .last-dot {
+    width: 22px !important;
+    height: 22px !important;
+    left: 47.5% !important;
+    bottom: 0 !important;
+  }
+
+  /*** RATES & BILLING WEBPART ***/
+  /* Typography */
+  .general-title,
+  .com-charge-column,
+  .charge-column,
+  .density-title,
+  .demand-title {
+    font-size: 0.8em;
+    /* font-size: 1.65rem;
+    text-align: center;*/
+  }
+
+  /*  .delivery-title {
+    font-size: 2.25rem;
+  }*/
+
+  /*.demand-title {
+    font-size: 2rem;
+  }*/
+
+  .delivery-contain > .cost-column > p,
+  .regulatory-contain > .cost-column > p {
+    font-size: 1.25rem;
+  }
+
+  /*.demand-title {
+    color: #cc0012;
+  }*/
+
+  .learn-more > a > button {
+    font-size: 1.25rem;
+  }
+
+  .commercial > div:nth-child(2),
+  .delivery-contain:nth-of-type(1),
+  .regulatory-contain:nth-of-type(1) {
+    margin-bottom: 1rem;
+  }
+
+  /*  .residential > .delivery-contain > .cost-column:not(:first-child),
+.residential > .regulatory-contain > .cost-column:not(:first-child) {
+  width: 33.33%;
+}*/
+
+  /*  .the-footnote {
+    font-size: 1.65rem !important;
+  }*/
+
+  /*  .demand-title {
+    display: none;
+  }*/
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}

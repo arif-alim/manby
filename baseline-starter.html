@@ -1,0 +1,359 @@
+<html>
+<!DOCTYPE html>
+
+<head>
+    <title>Workarea</title>
+    <link rel="stylesheet" href="https://www.hydroone.com/_layouts/15/1033/styles/Themable/corev15.css">
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/customwebparts.css">
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/bootstrap-custom.css" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/master.css?v=7.03" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/common.css?v=7.03" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/pagelayouts.css" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/bootstrap-dialog.min.css" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/wysdom.websearch.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+    <link rel="stylesheet" type="text/css" href="https://www.hydroone.com/Style%20Library/H1/css/print.css"
+        media="print" />
+    <link rel="stylesheet" href="https://www.hydroone.com/Style%20Library/H1/css/chat.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    
+    <style>
+         :root {
+            --mint: #E3F7F1;
+            --teal: #005866;
+            --text: #242424;
+            --gray: #D9D8D6;
+            --light: #E5E5E5;
+            --off: #FAFAFA;
+            --vibrant: #6ED7B7;
+            --yellow: #FFDD00;
+            --bold: 'RoobertTRIAL-Bold', sans-serif;
+            --semi: 'RoobertTRIAL-SemiBold', sans-serif;
+        }
+
+        #s4-workspace {
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        .row.justify-content-center{
+            display: flex;
+            justify-content: center;
+        }
+        .btn {
+            font-family: var(--semi);
+            font-size: 16px;
+            text-decoration: none !important;
+            transition:250ms all ease;
+        }
+
+        .btn.btn-primary.white {
+            background-color: #FFF;
+            color: var(--teal);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6 !important;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        p a {
+            font-family: var(--semi);
+            text-decoration: underline;
+        }
+        strong{
+            font-family: var(--bold);
+        }
+        .arrow-btn {
+            font-family: var(--semi);
+            font-size: 17px;
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow-btn:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23005866' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            border: none;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 12px;
+            width: 6px;
+            transition: 250ms all ease;
+            margin-top: 0.45rem;
+            content: " ";
+            margin-left: 1rem;
+        }
+
+        .arrow-btn.white:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        }
+
+        .arrow-btn.white:hover,
+        .arrow-btn.white:visited,
+        .arrow-btn.white:focus,
+        .arrow-btn.white:active {
+            color: #FFF;
+        }
+
+        .arrow-btn:hover:after {
+            transform: translateX(10px);
+        }
+        /* Scroll Animations */
+
+        .fade {
+            opacity: 0;
+            transition: 1000ms all ease-in-out
+        }
+
+        .fade.animate {
+            opacity: 1
+        }
+
+        .animation {
+            will-change: transform
+        }
+
+        @media screen and (min-width:992px) {
+
+            .fade-left-desktop,
+            .fade-right-desktop {
+                opacity: 0;
+                transition: 1500ms all ease-in-out
+            }
+
+            .fade-left-desktop {
+                transform: translateX(50px)
+            }
+
+            .fade-right-desktop {
+                transform: translateX(-50px)
+            }
+
+            .fade-left-desktop.animate,
+            .fade-right-desktop.animate {
+                opacity: 1;
+                transform: translateX(0)
+            }
+
+            .fade-down-desktop,
+            .fade-up-desktop {
+                opacity: 0;
+                transition: 1500ms all ease-in-out;
+                transform: translateY(50px)
+            }
+
+            .fade-up-desktop {
+                transform: translateY(50px)
+            }
+
+            .fade-down-desktop {
+                transform: translateY(-50px)
+            }
+
+            .fade-down-desktop.animate,
+            .fade-up-desktop.animate {
+                opacity: 1;
+                transform: translateY(0)
+            }
+
+            .grow-left-desktop,
+            .grow-right-desktop {
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: 1200ms all ease-in-out
+            }
+
+            .grow-left-desktop {
+                transform-origin: right
+            }
+
+            .grow-right-desktop {
+                transform-origin: left
+            }
+
+            .grow-left-desktop.animate,
+            .grow-right-desktop.animate {
+                transform: scaleX(1)
+            }
+
+            .grow-down-desktop,
+            .grow-up-desktop {
+                transform: scaleY(0);
+                transition: 1200ms all ease-in-out
+            }
+
+            .grow-up-desktop {
+                transform-origin: bottom
+            }
+
+            .grow-down-desktop {
+                transform-origin: top;
+            }
+
+            .grow-down-desktop.animate,
+            .grow-up-desktop.animate {
+                transform: scaleY(1)
+            }
+
+            .stagger-desktop-1 {
+                transition-delay: 300ms
+            }
+
+            .stagger-desktop-2 {
+                transition-delay: 600ms
+            }
+
+            .stagger-desktop-3 {
+                transition-delay: 900ms
+            }
+
+            .stagger-desktop-4 {
+                transition-delay: 1200ms
+            }
+        }
+
+        @media screen and (max-width:991px) {
+
+            .fade-down-mobile,
+            .fade-up-mobile {
+                opacity: 0;
+                transition: 1500ms all ease-in-out;
+
+            }
+
+            .fade-up-mobile {
+                transform: translateY(50px)
+            }
+
+            .fade-down-mobile {
+                transform: translateY(-50px)
+            }
+
+            .fade-down-mobile.animate,
+            .fade-up-mobile.animate {
+                opacity: 1;
+                transform: translateY(0)
+            }
+
+            .grow-left-mobile,
+            .grow-right-mobile {
+                transform: scaleX(0);
+                transition: 1200ms all ease-in-out
+            }
+
+            .grow-left-mobile {
+                transform-origin: right
+            }
+
+            .grow-right-mobile {
+                transform-origin: left;
+            }
+
+            .grow-left-mobile.animate,
+            .grow-right-mobile.animate {
+                transform: scaleX(1)
+            }
+
+            .grow-down-mobile,
+            .grow-up-mobile {
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: 1200ms all ease-in-out
+            }
+
+            .grow-up-mobile {
+                transform-origin: bottom
+            }
+
+            .grow-down-mobile {
+                transform-origin: top;
+            }
+
+            .grow-down-mobile.animate,
+            .grow-up-mobile.animate {
+                transform: scaleY(1)
+            }
+
+            .fade-mobile {
+                opacity: 0;
+                transition: 1000ms all ease-in-out
+            }
+
+            .fade-mobile.animate {
+                opacity: 1
+            }
+        }
+
+        /* Page Styles */
+
+        @media screen and (min-width:1200px) {
+            .h1-scroll-div {
+                background-color: #F1f1f1;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        if (window.document.documentMode) {
+            var x = document.getElementsByClassName("animation");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.add('animate');
+            }
+
+        } else {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var el = entry.target;
+
+                    if (entry.isIntersecting) {
+                        el.classList.add('animate');
+                        return; // if we added the class, exit the function
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+            document.querySelectorAll('.animation').forEach(function (i) {
+                if (i) {
+                    observer.observe(i);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

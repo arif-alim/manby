@@ -1,1233 +1,1233 @@
 <html>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 
-  <head>
-    <title>St.Clair Workarea</title>
-    <link rel="stylesheet" href="css/corev15.css" />
-    <link rel="stylesheet" href="css/customwebparts.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-custom.css" />
-    <script src="https://kit.fontawesome.com/a9c99bc2bb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/master.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/pagelayouts.css" />
-    <link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
-    <link rel="stylesheet" href="css/wysdom.websearch.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
-    <link rel="stylesheet" href="css/print.css" media="print" />
-    <link rel="stylesheet" href="css/chat.css" />
-    <!-- Custom styles by Jason -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/jquery.min.js"></script>
-  </head>
+<head>
+  <title>St.Clair Workarea</title>
+  <link rel="stylesheet" href="css/corev15.css" />
+  <link rel="stylesheet" href="css/customwebparts.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-custom.css" />
+  <script src="https://kit.fontawesome.com/a9c99bc2bb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/master.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/pagelayouts.css" />
+  <link rel="stylesheet" href="css/bootstrap-dialog.min.css" />
+  <link rel="stylesheet" href="css/wysdom.websearch.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="css/chat.css" />
+  <!-- Custom styles by Jason -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/jquery.min.js"></script>
+</head>
 
-  <body>
-    <style>
-      :root {
-        --mint: #e3f7f1;
-        --teal: #005866;
-        --text: #242424;
-        --gray: #d9d8d6;
-        --light: #e5e5e5;
-        --off: #fafafa;
-        --bold: 'Roobert-Bold', sans-serif;
-        --semi: 'Roobert-SemiBold', sans-serif;
-      }
+<body>
+  <style>
+    :root {
+      --mint: #e3f7f1;
+      --teal: #005866;
+      --text: #242424;
+      --gray: #d9d8d6;
+      --light: #e5e5e5;
+      --off: #fafafa;
+      --bold: 'Roobert-Bold', sans-serif;
+      --semi: 'Roobert-SemiBold', sans-serif;
+    }
 
-      #s4-workspace {
-        overflow-x: hidden;
-        height: 100%;
-      }
+    a {
+      color: #005866;
+    }
 
-      html {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-        overflow-y: scroll;
-      }
+    #s4-workspace {
+      overflow-x: hidden;
+      height: 100%;
+    }
 
-      body {
-        line-height: 1.6;
-        color: var(--text);
-      }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
 
-      .row.justify-content-center {
-        display: flex;
-        justify-content: center;
-      }
-      .btn {
-        font-family: var(--semi);
-        font-size: 16px;
-        text-decoration: none !important;
-        transition: 250ms all ease;
-        min-width: 160px;
-      }
-      .btn.btn-lg {
-        font-size: 18px;
-      }
-      .btn.btn-primary.white {
-        background-color: #fff;
-        color: #005b66;
-        border-color: #fff;
-      }
+    body {
+      line-height: 1.6;
+      color: var(--text);
+    }
 
-      .btn.btn-primary.white:hover {
-        background-color: transparent;
-        color: #fff;
-      }
-      .btn.btn-primary.disabled {
-        color: var(--text);
-        background-color: var(--gray);
-        border-color: transparent;
-        opacity: 1;
-      }
-      .arrow-btn {
-        font-family: 'RoobertTRIAL-SemiBold';
-        font-size: 17px;
-        text-decoration: none !important;
-        display: flex;
-        align-items: center;
-      }
+    .row.justify-content-center {
+      display: flex;
+      justify-content: center;
+    }
 
-      .arrow-btn:after {
-        background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23005866' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-        border: none;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 12px;
-        width: 6px;
-        transition: 250ms all ease;
-        margin-top: 0.45rem;
-        content: ' ';
-        margin-left: 1rem;
-      }
+    .btn {
+      font-family: var(--semi);
+      font-size: 16px;
+      text-decoration: none !important;
+      transition: 250ms all ease;
+      min-width: 160px;
+    }
 
-      .arrow-btn.white:after {
-        background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-      }
+    .btn.btn-lg {
+      font-size: 18px;
+    }
 
-      .arrow-btn.white:hover {
-        color: #fff;
-      }
+    .btn.btn-primary.white {
+      background-color: #fff;
+      color: #005b66;
+      border-color: #fff;
+    }
 
-      .arrow-btn:hover:after {
-        transform: translateX(10px);
-      }
+    .btn.btn-primary.white:hover {
+      background-color: transparent;
+      color: #fff;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        line-height: 1.2;
-        margin-top: 0;
-      }
+    .btn.btn-primary.disabled {
+      color: var(--text);
+      background-color: var(--gray);
+      border-color: transparent;
+      opacity: 1;
+    }
 
-      p {
-        line-height: 1.6 !important;
-      }
+    .arrow-btn {
+      font-family: 'RoobertTRIAL-SemiBold';
+      font-size: 17px;
+      text-decoration: none !important;
+      display: flex;
+      align-items: center;
+    }
 
-      h1 {
-        font-size: 3rem;
-        font-weight: 600;
-      }
+    .arrow-btn:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23005866' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      border: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 12px;
+      width: 6px;
+      transition: 250ms all ease;
+      margin-top: 0.45rem;
+      content: ' ';
+      margin-left: 1.5rem;
+    }
 
-      strong {
-        font-weight: 700;
-      }
+    .arrow-btn.white:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
 
-      p a {
-        font-family: 'RoobertTRIAL-SemiBold';
-        text-decoration: underline;
-      }
+    .arrow-btn.white:hover {
+      color: #fff;
+    }
 
-      #banner {
-        background-color: #ffdd00;
-        padding: 0.75rem 0;
-        font-family: 'RoobertTRIAL-SemiBold';
-      }
-      #banner p {
-        margin: 0;
-      }
-      #masthead {
-        padding: 5rem 0;
-        position: relative;
-      }
-      #masthead h2 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-      }
-      #masthead .button-date {
-        margin: 2rem 0;
-        display: flex;
-        align-items: center;
-      }
-      #masthead .button-date .date {
-        margin-left: 2rem;
-        font-family: var(--bold);
-      }
-      #masthead .container {
-        z-index: 2;
-        position: relative;
-      }
 
-      #masthead .row {
-        display: flex;
-        align-items: flex-end;
-      }
+    .arrow-btn-white {
+      font-family: 'RoobertTRIAL-SemiBold';
+      font-size: 1.8rem;
+      text-decoration: none !important;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      max-width: 200px;
+    }
 
-      #masthead .content {
-        /* background: rgba(0, 91, 102, 0.9);
+    .arrow-btn-white:after {
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      border: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 12px;
+      width: 6px;
+      transition: 250ms all ease;
+      margin-top: 0.45rem;
+      content: ' ';
+      margin-left: 1.5rem;
+    }
+
+    .arrow-btn-white.white:hover {
+      color: #fff;
+    }
+
+    .arrow-btn-white:hover:after {
+      transform: translateX(10px);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6 !important;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    p a {
+      font-family: 'RoobertTRIAL-SemiBold';
+      text-decoration: underline;
+    }
+
+    #banner {
+      background-color: #ffdd00;
+      padding: 0.75rem 0;
+      font-family: 'RoobertTRIAL-SemiBold';
+    }
+
+    #banner p {
+      margin: 0;
+    }
+
+    #masthead {
+      padding: 5rem 0;
+      position: relative;
+    }
+
+    #masthead h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #masthead .button-date {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #masthead .button-date .date {
+      margin-left: 2rem;
+      font-family: var(--bold);
+    }
+
+    #masthead .container {
+      z-index: 2;
+      position: relative;
+    }
+
+    #masthead .row {
+      display: flex;
+      position: relative;
+      align-items: flex-end;
+    }
+
+    #masthead .content {
+      /* background: rgba(0, 91, 102, 0.9);
         color: #fff !important;
         padding: 4rem;
         backdrop-filter: blur(20px);
         position: relative;
         z-index: 2; */
 
-        background: rgba(0, 91, 102, 0.9);
-        color: #fff !important;
-        padding: 3.6rem;
-        backdrop-filter: blur(20px);
-        position: relative;
-        z-index: 2;
-        width: 100%;
+      background: rgba(0, 91, 102, 0.9);
+      color: #fff !important;
+      padding: 3.6rem;
+      backdrop-filter: blur(20px);
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      max-width: 593px;
+      margin: 0;
+    }
+
+    #masthead .down-arrow {
+      position: absolute;
+      bottom: -3rem;
+      color: #003b42;
+      font-weight: 600;
+    }
+
+    #masthead .image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 680px;
+      width: 100%;
+      max-width: 908px;
+      z-index: 1;
+    }
+
+    #masthead .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #masthead p a {
+      color: #fff;
+    }
+
+    .title-row {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+
+    .title-row h1 {
+      width: 500px;
+      font-size: 3rem;
+    }
+
+    .title-row .details {
+      width: 300px;
+      border-left: 1px solid #fff;
+      padding-left: 3rem;
+    }
+
+    .details,
+    .details .stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-info {
+      margin-bottom: 4.5rem;
+      padding: 2rem;
+      background-color: var(--off);
+    }
+
+    .contact-info h3 {
+      margin-bottom: 2rem;
+    }
+
+    #intro {
+      display: flex;
+      margin-top: 5rem;
+      align-items: center;
+    }
+
+    #intro h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #intro img {
+      width: 50%;
+      height: 750px;
+      object-fit: cover;
+
+    }
+
+    #intro .content {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 4rem;
+      width: 100%;
+      margin-left: -400px;
+    }
+
+    #be-heard {
+      display: flex;
+      margin-top: 5rem;
+      align-items: center;
+    }
+
+    #be-heard h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #be-heard img {
+      width: 40%;
+      height: 500px;
+      object-fit: cover;
+
+    }
+
+    #be-heard .content {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 4rem;
+      width: 100%;
+
+    }
+
+    .notice {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 639px;
+      background-color: var(--off);
+      margin-top: 5rem;
+      margin-bottom: -15rem;
+      padding: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+
+    #map {
+      margin: 9rem 0 6rem;
+      position: relative;
+      text-align: center;
+    }
+
+    #map h2 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    #map h3 {
+      font-size: 3rem;
+      margin: 2rem 0 5rem;
+    }
+
+    #map .text-center {
+      margin-bottom: 3rem;
+    }
+
+    #map .d-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: space-between;
+      margin: 3rem 0 5rem;
+      background-color: var(--off);
+      padding: 3rem;
+    }
+
+    #map .d-flex p {
+      width: 70%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    #map .map-link-large,
+    #map .map-link-small {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    #map .map-link-large img,
+    #map .map-link-small img {
+      opacity: 1;
+      transition: 250ms all ease;
+    }
+
+    #map .map-link-large img {
+      margin-bottom: 2rem;
+    }
+
+    #map .map-link-small img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #map .map-link-large {
+      margin-bottom: 5rem;
+    }
+
+    #map .map-link-large:hover,
+    #map .map-link-small:hover {
+      text-decoration: none;
+    }
+
+    #map .map-link-large:hover img,
+    #map .map-link-small:hover img {
+      opacity: 1;
+    }
+
+    #map .map-link-large:hover .arrow-btn:after,
+    #map .map-link-small:hover .arrow-btn:after {
+      transform: translateX(10px);
+    }
+
+    #map .map-link-small .content {
+      background-color: var(--off);
+      padding: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      transition: 250ms all ease;
+    }
+
+    #map .map-link-small:hover .content {
+      background-color: var(--mint);
+    }
+
+    #map .map-link-small .content h6 {
+      color: var(--text);
+      font-size: 1.5rem;
+    }
+
+    #map #square {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 0;
+    }
+
+    #open-house {
+      margin: 10rem 0 5rem;
+      position: relative;
+    }
+
+    #open-house h2 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      max-width: 300px;
+      margin-left: 0;
+    }
+
+    #open-house .image-text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    #open-house .image-text .image {
+      height: 400px;
+    }
+
+    #open-house .image-text .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #open-house .btn.disabled {
+      margin: 1rem 0 0;
+    }
+
+    #open-house .button-date {
+      margin: 2rem 0 3rem;
+      display: flex;
+      align-items: center;
+    }
+
+    #open-house .button-date .date {
+      margin-left: 2rem;
+      font-family: var(--bold);
+    }
+
+    #timeline {
+      background-color: var(--mint);
+      padding: 15rem 0 10rem;
+      position: relative;
+      margin-top: 5rem;
+      margin-bottom: 0 !important;
+    }
+
+    #timeline #circle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    #timeline h2 {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    #timeline .timeline .milestone:before {
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: var(--teal);
+      display: block;
+      position: absolute;
+      left: 191px;
+      margin: auto;
+    }
+
+    #timeline .timeline .milestone {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-bottom: 5rem;
+    }
+
+    #timeline .timeline .milestone.current {
+      font-family: var(--bold);
+    }
+
+    #timeline .timeline .milestone.current:after {
+      background-color: #6ed7b7;
+    }
+
+    #timeline .timeline .milestone:last-of-type:before {
+      content: none;
+    }
+
+    #timeline .timeline .milestone .date {
+      font-family: var(--bold);
+      text-align: right;
+      width: 100px;
+      display: block;
+    }
+
+    #timeline .timeline .milestone:after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      background-color: var(--teal);
+      height: 24px;
+      width: 24px;
+      border-radius: 25px;
+      left: 180px;
+      top: 0;
+    }
+
+    #timeline .timeline .milestone .description {
+      margin-left: 100px;
+      width: 412px;
+    }
+
+    .accordion-toggle {
+      cursor: pointer;
+      padding: 2rem;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f8f8f8;
+    }
+
+    .accordion-toggle .button {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      /* Vertical line */
+      /* horizontal line */
+    }
+
+    .accordion-toggle .button:before,
+    .accordion-toggle .button:after {
+      content: '';
+      position: absolute;
+      background-color: #d7d7d7;
+      transition: transform 0.25s ease-out;
+    }
+
+    .accordion-toggle .button:before {
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      margin-left: -1px;
+    }
+
+    .accordion-toggle .button:after {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      margin-top: -1px;
+    }
+
+    .accordion-toggle.active {
+      color: #005b66;
+    }
+
+    .accordion-toggle.active .button {
+      cursor: pointer;
+    }
+
+    .accordion-toggle.active .button:before {
+      transform: rotate(90deg);
+    }
+
+    .accordion-toggle.active .button:after {
+      transform: rotate(180deg);
+    }
+
+    .accordion-toggle.active .button:before,
+    .accordion-toggle.active .button:after {
+      background-color: #005b66;
+    }
+
+    .accordion-toggle div {
+      display: inline-block;
+      font-weight: 400;
+    }
+
+    .accordion-content {
+      display: none;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    @media screen and (min-width: 1200px) {
+      .h1-scroll-div {
+        background-color: #f1f1f1;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 1199px) {}
+
+    @media screen and (max-width: 991px) {
+      #open-house .image-text {
+        flex-direction: column-reverse;
+      }
+
+      #open-house h2 {
+        margin-top: 3rem;
+      }
+
+      #masthead {
         display: flex;
-        flex-flow: column wrap;
-        max-width: 593px;
-        margin: 0;
+        flex-direction: column-reverse;
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
       }
 
-      #masthead .down-arrow {
-        position: absolute;
-        bottom: -3rem;
-        color: #003b42;
-        font-weight: 600;
-      }
-
-      #masthead .image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        height: 680px;
-        width: 100%;
-        max-width: 908px;
-        z-index: 1;
-      }
-
-      #masthead .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      #masthead p a {
-        color: #fff;
-      }
-      .title-row {
-        display: flex;
-        margin-bottom: 2rem;
+      #masthead h2 {
+        font-size: 2.5rem;
       }
 
       .title-row h1 {
-        width: 500px;
-        font-size: 3rem;
+        width: 60%;
+        padding-right: 4rem;
       }
 
       .title-row .details {
-        width: 300px;
-        border-left: 1px solid #fff;
-        padding-left: 3rem;
+        width: 40%;
       }
 
-      .details,
-      .details .stat {
-        display: flex;
+      #masthead .row {
         flex-direction: column;
       }
 
-      .contact-info {
-        margin-bottom: 2rem;
-        padding: 2rem;
-        background-color: var(--off);
-      }
-
-      .contact-info h3 {
-        margin-bottom: 2rem;
-      }
-
-      #intro {
+      #masthead .image {
+        width: 100%;
         position: relative;
-        margin-top: 5rem;
+        height: 400px;
       }
 
-      #intro h2 {
-        font-size: 3.5rem;
+      #masthead .content {
+        margin-top: -10rem;
+      }
+
+      .row.justify-content-center {
+        display: block;
+      }
+
+      .contact-info {
+        text-align: center;
+      }
+
+      #map .d-flex {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      #map .d-flex p {
+        width: 100%;
+        text-align: center;
         margin-bottom: 2rem;
       }
 
       #intro img {
-        width: 50%;
-        height: 750px;
-        object-fit: cover;
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        position: relative;
+        height: 350px;
+        width: 75%;
       }
 
       #intro .content {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        margin-top: 4rem;
-        padding: 4rem;
-        width: 100%;
-      }
-
-      #small-consultation .content {
-        background-color: var(--off);
-        margin-top: 5rem;
-        margin-bottom: -12rem;
-        padding: 4rem;
-        position: relative;
-        z-index: 2;
-      }
-      #small-consultation .content .list-item {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--gray);
-      }
-      #small-consultation .content .list-item:first-of-type {
-        margin-top: 0;
-        padding-top: 0;
-        border-top: 0;
-      }
-      #small-consultation .content h3 {
-        margin-bottom: 2rem;
-      }
-      #small-consultation .content h4 {
-        margin-bottom: 0;
-      }
-      #small-consultation .content .btn-group {
-        display: flex;
-      }
-      #small-consultation .content .btn-group a {
-        margin-right: 2rem;
-      }
-      #map {
-        margin: 10rem 0;
-        position: relative;
-        text-align: center;
-      }
-      #map h2 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
-      }
-      #map h3 {
-        font-size: 3rem;
-        margin: 2rem 0 5rem;
-      }
-      #map .text-center {
-        margin-bottom: 3rem;
-      }
-      #map .d-flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 3rem 0 5rem;
-        background-color: var(--mint);
-        padding: 3rem;
-      }
-      #map .d-flex p {
-        width: 70%;
-        margin-bottom: 0;
-        text-align: left;
-      }
-
-      #map .map-link-large,
-      #map .map-link-small {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 3rem;
-      }
-      #map .map-link-large img,
-      #map .map-link-small img {
-        opacity: 1;
-        transition: 250ms all ease;
-      }
-      #map .map-link-large img {
-        margin-bottom: 2rem;
-      }
-      #map .map-link-small img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-      }
-      #map .map-link-large {
-        margin-bottom: 5rem;
-      }
-      #map .map-link-large:hover,
-      #map .map-link-small:hover {
-        text-decoration: none;
-      }
-      #map .map-link-large:hover img,
-      #map .map-link-small:hover img {
-        opacity: 1;
-      }
-      #map .map-link-large:hover .arrow-btn:after,
-      #map .map-link-small:hover .arrow-btn:after {
-        transform: translateX(10px);
-      }
-      #map .map-link-small .content {
-        background-color: var(--off);
-        padding: 2rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        transition: 250ms all ease;
-      }
-      #map .map-link-small:hover .content {
-        background-color: var(--mint);
-      }
-      #map .map-link-small .content h6 {
-        color: var(--text);
-        font-size: 1.5rem;
-      }
-      #map #square {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        z-index: 0;
-      }
-      #open-house {
-        margin: 10rem 0 5rem;
-        position: relative;
-      }
-
-      #open-house h2 {
-        font-size: 4rem;
-        margin-bottom: 2rem;
-        max-width: 300px;
-        margin-left: 0;
-      }
-      #open-house .image-text {
-        display: flex;
-        align-items: center;
-        margin-bottom: 4rem;
-      }
-      #open-house .image-text .image {
-        height: 400px;
-      }
-      #open-house .image-text .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      #open-house .btn.disabled {
-        margin: 1rem 0 0;
-      }
-      #open-house .button-date {
-        margin: 2rem 0 3rem;
-        display: flex;
-        align-items: center;
-      }
-      #open-house .button-date .date {
-        margin-left: 2rem;
-        font-family: var(--bold);
-      }
-      #timeline {
-        background-color: var(--mint);
-        padding: 15rem 0 10rem;
-        position: relative;
-        margin-top: 5rem;
-      }
-      #timeline #circle {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-      }
-      #timeline h2 {
-        font-size: 4rem;
-        text-align: center;
-        margin-bottom: 5rem;
+        margin-top: -4rem;
       }
 
       #timeline .timeline .milestone:before {
-        content: '';
-        height: 100%;
-        width: 2px;
-        background-color: var(--teal);
-        display: block;
-        position: absolute;
-        left: 191px;
-        margin: auto;
-      }
-
-      #timeline .timeline .milestone {
-        display: flex;
-        position: relative;
-        padding-bottom: 5rem;
-      }
-      #timeline .timeline .milestone.current {
-        font-family: var(--bold);
-      }
-      #timeline .timeline .milestone.current:after {
-        background-color: #6ed7b7;
-      }
-      #timeline .timeline .milestone:last-of-type:before {
-        content: none;
-      }
-      #timeline .timeline .milestone .date {
-        font-family: var(--bold);
-        text-align: right;
-        width: 150px;
-        display: block;
+        left: 10px;
       }
 
       #timeline .timeline .milestone:after {
-        content: ' ';
-        position: absolute;
-        display: block;
-        background-color: var(--teal);
-        height: 24px;
-        width: 24px;
-        border-radius: 25px;
-        left: 180px;
-        top: 0;
+        left: -1px;
+      }
+
+      #timeline .timeline .milestone {
+        padding-left: 4rem;
+        flex-direction: column;
+      }
+
+      #timeline .timeline .milestone .date {
+        width: 100%;
+        text-align: left;
       }
 
       #timeline .timeline .milestone .description {
-        margin-left: 100px;
-        width: 400px;
-      }
-      .accordion-toggle {
-        cursor: pointer;
-        padding: 2rem;
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #f8f8f8;
+        margin-left: 0;
       }
 
-      .accordion-toggle .button {
-        position: relative;
-        width: 16px;
-        height: 16px;
-        /* Vertical line */
-        /* horizontal line */
-      }
-
-      .accordion-toggle .button:before,
-      .accordion-toggle .button:after {
-        content: '';
-        position: absolute;
-        background-color: #d7d7d7;
-        transition: transform 0.25s ease-out;
-      }
-
-      .accordion-toggle .button:before {
-        top: 0;
-        left: 50%;
-        width: 2px;
-        height: 100%;
-        margin-left: -1px;
-      }
-
-      .accordion-toggle .button:after {
-        top: 50%;
-        left: 0;
+      #timeline .timeline .milestone .description {
         width: 100%;
-        height: 2px;
-        margin-top: -1px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .tips .tip .content {
+        padding: 2rem 3rem;
       }
 
-      .accordion-toggle.active {
-        color: #005b66;
-      }
-
-      .accordion-toggle.active .button {
-        cursor: pointer;
-      }
-
-      .accordion-toggle.active .button:before {
-        transform: rotate(90deg);
-      }
-
-      .accordion-toggle.active .button:after {
-        transform: rotate(180deg);
-      }
-
-      .accordion-toggle.active .button:before,
-      .accordion-toggle.active .button:after {
-        background-color: #005b66;
-      }
-
-      .accordion-toggle div {
-        display: inline-block;
-        font-weight: 400;
-      }
-
-      .accordion-content {
-        display: none;
-        margin-bottom: 3rem;
-        padding: 2rem;
+      .tips .tip .content p {
         font-size: 16px;
-        background-color: rgba(255, 255, 255, 0.4);
       }
-      @media screen and (min-width: 1200px) {
-        .h1-scroll-div {
-          background-color: #f1f1f1;
-          margin: 0 auto;
-          padding: 1rem;
-        }
-      }
+    }
 
-      @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
+      #open-house .image-text .image {
+        height: 300px;
       }
+    }
 
-      @media screen and (max-width: 991px) {
-        #open-house .image-text {
-          flex-direction: column-reverse;
-        }
-        #open-house h2 {
-          margin-top: 3rem;
-        }
-        #masthead {
-          display: flex;
-          flex-direction: column-reverse;
-          padding-top: 0;
-          align-items: center;
-          justify-content: center;
-          padding: 0;
-        }
-        #masthead h2 {
-          font-size: 2.5rem;
-        }
-        .title-row h1 {
-          width: 60%;
-          padding-right: 4rem;
-        }
-        .title-row .details {
-          width: 40%;
-        }
-        #masthead .row {
-          flex-direction: column;
-        }
-        #masthead .image {
-          width: 100%;
-          position: relative;
-          height: 400px;
-        }
-        #masthead .content {
-          margin-top: -10rem;
-        }
-        .row.justify-content-center {
-          display: block;
-        }
-        .contact-info {
-          text-align: center;
-        }
-        #map .d-flex {
-          flex-direction: column;
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-        #map .d-flex p {
-          width: 100%;
-          text-align: center;
-          margin-bottom: 2rem;
-        }
-        #intro img {
-          position: relative;
-          height: 350px;
-          width: 75%;
-        }
-        #intro .content {
-          margin-top: -4rem;
-        }
-        #timeline .timeline .milestone:before {
-          left: 10px;
-        }
-        #timeline .timeline .milestone:after {
-          left: -1px;
-        }
-        #timeline .timeline .milestone {
-          padding-left: 4rem;
-          flex-direction: column;
-        }
-        #timeline .timeline .milestone .date {
-          width: 100%;
-          text-align: left;
-        }
-        #timeline .timeline .milestone .description {
-          margin-left: 0;
-        }
-        #timeline .timeline .milestone .description {
-          width: 100%;
-        }
+    @media screen and (max-width: 575px) {
+      #masthead .button-date {
+        align-items: flex-start;
+        flex-direction: column-reverse;
       }
 
-      @media screen and (max-width: 900px) {
-        .tips .tip .content {
-          padding: 2rem 3rem;
-        }
-
-        .tips .tip .content p {
-          font-size: 16px;
-        }
+      #masthead .button-date .date {
+        margin-left: 0;
       }
 
-      @media screen and (max-width: 767px) {
-        #open-house .image-text .image {
-          height: 300px;
-        }
+      .title-row {
+        flex-direction: column;
       }
 
-      @media screen and (max-width: 575px) {
-        #masthead .button-date {
-          align-items: flex-start;
-          flex-direction: column-reverse;
-        }
-        #masthead .button-date .date {
-          margin-left: 0;
-        }
-        .title-row {
-          flex-direction: column;
-        }
-        .title-row h1 {
-          width: 100%;
-          padding-right: 0;
-          font-size: 2.5rem;
-        }
-        .title-row .details {
-          width: 100%;
-          padding-left: 0;
-          border: none;
-          flex-direction: row;
-        }
-        .title-row .details .stat:first-of-type {
-          margin-right: 2rem;
-        }
-        #masthead {
-          margin-bottom: 0;
-        }
-
-        #masthead .image {
-          width: 100%;
-          height: 400px;
-        }
-        #map h2,
-        #open-house h2,
-        #timeline h2 {
-          font-size: 2.5rem;
-        }
-        #map .map-link-large img,
-        #map .map-link-small img {
-          height: 220px;
-        }
-        #small-consultation .content .btn-group {
-          flex-direction: column;
-        }
-        #small-consultation .content .btn-group a {
-          font-size: 14px;
-          margin-bottom: 1rem;
-          position: relative;
-          padding-right: 1rem;
-        }
-        #small-consultation .content .btn-group .arrow-btn:after {
-          position: absolute;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-        }
+      .title-row h1 {
+        width: 100%;
+        padding-right: 0;
+        font-size: 2.5rem;
       }
 
-      @media screen and (max-width: 1200px) {
-        .content {
-          width: 100%;
-          max-width: 593px;
-          margin-left: -100px;
-        }
+      .title-row .details {
+        width: 100%;
+        padding-left: 0;
+        border: none;
+        flex-direction: row;
       }
 
-      @media screen and (max-width: 992px) {
-        .content {
-          margin: 0 auto;
-          width: 100%;
-        }
+      .title-row .details .stat:first-of-type {
+        margin-right: 2rem;
       }
 
-      .content > * {
+      #masthead {
+        margin-bottom: 0;
+      }
+
+      #masthead .image {
+        width: 100%;
+        height: 400px;
+      }
+
+      #map h2,
+      #open-house h2,
+      #timeline h2 {
+        font-size: 2.5rem;
+      }
+
+      #map .map-link-large img,
+      #map .map-link-small img {
+        height: 220px;
+      }
+
+
+    }
+
+    @media screen and (max-width: 1200px) {
+      .content {
+        width: 100%;
+        max-width: 593px;
+        margin-left: -100px;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .content {
+        margin: 0 auto;
         width: 100%;
       }
+    }
 
-      .content h2 {
-        font-size: 2.4rem !important;
-        margin: 2rem 0 !important;
-      }
+    .content>* {
+      width: 100%;
+    }
 
-      .cta-register {
-        display: flex;
-        flex-flow: row nowrap;
-        margin-top: 20px;
-      }
+    .energize-heading {
+      font-size: 2.4rem !important;
+      margin: 3.6rem 0 !important;
+    }
 
-      .cta-register h3 {
-        font-size: 2rem;
-        flex-grow: 2;
-        width: 100%;
-      }
+    .corridor-heading {
+      font-size: 2.2rem !important;
+      margin: 2.5rem 0 !important;
+    }
 
-      .cta-register a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background-color: white;
-        color: var(--teal);
-        font-size: 1.5rem;
-        font-weight: 600;
-        flex-grow: 1;
-        width: 300px;
-        height: 48px;
-      }
+    .cta-register {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 3rem;
+    }
 
-      .drop-shadow {
-        text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
-      }
+    .cta-register h3 {
+      font-size: 2rem;
+      flex-grow: 2;
+      width: 100%;
+    }
 
-      .custom-link {
-        color: var(--teal);
-      }
-    </style>
-    <section id="masthead">
-      <div class="container">
-        <div class="row">
-          <div class="content">
-            <div class="title-row">
-              <h1>
-                Etobicoke<br />
-                Greenway Project
-              </h1>
-              <div class="details">
-                <div class="stat">
-                  <small>Expected Completion Date</small>
-                  <strong>2026</strong>
-                </div>
-                <div class="stat">
-                  <small>Current Project Phase</small>
-                  <strong>Planning</strong>
-                </div>
+    .cta-register a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: white;
+      color: var(--teal);
+      font-size: 1.5rem;
+      font-weight: 600;
+      flex-grow: 1;
+      width: 300px;
+      height: 48px;
+    }
+
+    .drop-shadow {
+      text-shadow: -2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .custom-link {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .custom-link:hover {
+      text-decoration: none;
+    }
+
+    .planning {
+      display: flex;
+    }
+
+    .cta-listen {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    .btn-register {
+      display: flex;
+      justify-content: center;
+      background-color: #005866;
+      color: white;
+    }
+
+    .btn-register:hover {
+      color: white;
+    }
+
+    .listen-text {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .notice-btn {
+      margin-top: 1.8rem;
+    }
+
+    .date,
+    .description {
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 4rem;
+
+    }
+
+    .cta-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.35);
+      width: 100%;
+      max-width: 550px;
+      padding: 2rem;
+    }
+
+    .cta-bottom h2 {
+      font-size: 2.2rem !important;
+      margin-bottom: 1.8rem !important;
+      margin-top: 1rem;
+    }
+
+    .cta-bottom p {
+      font-size: 1.6rem;
+      margin: 0 0 2px !important;
+    }
+
+    .cta-bottom a {
+      font-size: 1.6rem;
+    }
+  </style>
+
+
+  <section id="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="content">
+          <div class="title-row">
+            <h1>
+              Etobicoke<br />
+              Greenway Project
+            </h1>
+            <div class="details">
+              <div class="stat">
+                <small>Expected Completion Date</small>
+                <strong>2026</strong>
+              </div>
+              <div class="stat">
+                <small>Current Project Phase</small>
+                <strong>Planning</strong>
               </div>
             </div>
-            <h2 class="drop-shadow">
-              Energizing life for people and communities by building safer and more resilient communities.
-            </h2>
-            <p>
-              Hydro One is committed to energizing life by building safer and more resilient communities. To meet the
-              growing demand for electricity in west and central Toronto, Hydro One is initiating a Class Environmental
-              Assessment (Class EA) to rebuild a non-energized 115 kilovolt (kV) transmission line into an energized 230
-              kV line. This 6.5 km line is located on the east side of an existing hydro corridor that extends between
-              the Richview and Manby Transformer Stations in Etobicoke, see map below.
-            </p>
-            <h2 class="drop-shadow">Reimagining the Corridor</h2>
-            <p>
-              As a key part of the Class EA, we are committed to working closely with the community to create a shared
-              vision for how the hydro corridor could be used once the project has been completed.
-            </p>
+          </div>
+          <h2 class="drop-shadow energize-heading">
+            Energizing life for people and communities by building safer and more resilient communities.
+          </h2>
+          <p>
+            Hydro One is committed to energizing life by building safer and more resilient communities. To meet the
+            growing demand for electricity in west and central Toronto, Hydro One is initiating a Class Environmental
+            Assessment (Class EA) to rebuild a non-energized 115 kilovolt (kV) transmission line into an energized 230
+            kV line. This 6.5 km line is located on the east side of an existing hydro corridor that extends between
+            the Richview and Manby Transformer Stations in Etobicoke, see map below.
+          </p>
+          <h2 class="drop-shadow corridor-heading">Reimagining the Corridor</h2>
+          <p>
+            As a key part of the Class EA, we are committed to working closely with the community to create a shared
+            vision for how the hydro corridor could be used once the project has been completed.
+          </p>
 
-            <div class="cta-register">
-              <h3 class="drop-shadow">You’re invited to participate in upcoming meetings</h3>
+          <div class="cta-register">
+            <h3 class="drop-shadow">You’re invited to participate in upcoming meetings</h3>
 
-              <a href="#">
-                <div>Register Now</div>
-                <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.916675 10.1625C0.70346 10.1625 0.490141 10.0811 0.327651 9.91835C0.00215171 9.59285 0.00215171 9.06554 0.327651 8.74004L3.90606 5.1628L0.327651 1.58491C0.00215171 1.25941 0.00215171 0.7321 0.327651 0.4066C0.653151 0.0811007 1.18046 0.0811007 1.50596 0.4066L5.67236 4.573C5.99786 4.8985 5.99786 5.4258 5.67236 5.7513L1.50596 9.9177C1.34321 10.0818 1.12994 10.1625 0.916675 10.1625Z"
-                    fill="#005B66"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="contact-info">
-            <h3>We're here to help you!</h3>
-            <strong>
-              Hydro One’s Community Relations
-
-              <a href="mailto:Community.Relations@HydroOne.com">Community.Relations@HydroOne.com</a><br />
-              <a href="tel:+1-877-345-6799">1-877-345-6799</a>
-            </strong>
-          </div>
-        </div>
-      </div>
-      <div class="image">
-        <img src="assets/images/manby-masthead.jpg" alt="Mother and son watching TV together." />
-      </div>
-    </section>
-    <section id="intro" style="margin-top: 300px">
-      <img
-        src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/planning.jpg"
-        alt="Mother and daughter using a tablet."
-      />
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-10 col-lg-8 pull-right">
-            <div class="content">
-              <h2>Planning Process</h2>
-              <p>
-                Minimizing the impact of our projects and operations on the environment and community is important to
-                us. Planning will follow the “Class Environmental Assessment for Minor Transmission Facilities” (Class
-                EA, 2022), in accordance with the Ontario Environmental Assessment Act. This planning process applies to
-                transmission infrastructure projects that are carried out routinely and have predictable environmental
-                effects that can be readily managed.
-              </p>
-              <p>
-                Following completion of the Class EA, approval from the Ontario Energy Board under Section 92 (Leave to
-                Construct) of the Ontario Energy Board Act will be required. The in-service date for this project is
-                anticipated for 2026.
-                <a class="custom-link" href="#">Class Environmental Assessment for Minor Transmission Facilities</a>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="map">
-      <svg id="square" width="240" height="447" viewBox="0 0 240 447" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="163.5" width="327" height="327" transform="rotate(-30 0 163.5)" fill="#E3F7F1" fill-opacity="0.25" />
-      </svg>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Map of Project Area and Route Alternatives</h2>
-            <div class="d-flex">
-              <p>
-                View our interactive map showing the project area and the alternative routes identified for the project,
-                which will be further evaluated in the environmental assessment.
-              </p>
-              <a
-                href="https://ddei5-0-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2furldefense.proofpoint.com%2fv2%2furl%3fu%3dhttps%2d3A%5f%5fexperience.arcgis.com%5fexperience%5f770b90c559ad4619a186d955bf8798b1%5f%26d%3dDwMGaQ%26c%3dJnLCALisrKxQZnQdpANaBZUceEgEGD7wjEyj%5f%5f0JcDA%26r%3dqYWz5lbZQRosta0bOhjfNWcF2z2J0Lx9Sea3yKdpwMA%26m%3dARqWOAOISTAW4zpBpx3lXbdMuDWDrxPjqzGhlcDV%5fV851C4cc0xMqtY%2dAYTmnBEs%26s%3dynqOS7rsx1TlBA9HyI2S9A97yp%5fBMC47tf1x0thn9Jk%26e%3d&umid=79BD9062-D797-5305-9026-F621CFAC31D6&auth=7c4ba316753dc19277b4cd0bdedce6f0c8e9311b-b40439fa9a1e69bdd9f08fdea9aeac38da552a5d"
-                target="_blank"
-                class="btn btn-primary btn-lg"
-                >View our interactive map</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h3>Route Alternatives</h3>
-            <p>
-              <a
-                href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/st_clair_route_alternatives.pdf"
-                >Click here</a
-              >
-              for more information on how route alternatives are identified.
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-xs-12 col-md-9">
-            <a
-              href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/SCTL_NoC_Map_Feb_8.pdf"
-              target="_blank"
-              class="map-link-large"
-            >
-              <img
-                src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/alt-routes-st-clair_feb_8.jpg"
-                alt="Project Area Map"
-              />
-              <span class="arrow-btn">Enlarge (.PDF)</span>
+            <a href="#">
+              <span class="arrow-btn">Register Now</span>
             </a>
           </div>
         </div>
-        <div class="row" id="alternative-routes">
-          <div class="col-xs-12" id="accordion">
-            <h4 class="accordion-toggle">
-              <div>Detailed Route Alternative Maps</div>
-              <div class="button"></div>
-            </h4>
-            <div class="accordion-content">
-              <div class="row">
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/All_Routes.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route1.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>All Routes</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_1.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route1.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>Route 1</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_2.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route2.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>Route 2</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_3.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route3.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>Route 3</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_4.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route4.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>Route 4</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/routes/route_5.pdf"
-                    target="_blank"
-                    class="map-link-small"
-                  >
-                    <img
-                      src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/route5.JPG"
-                      alt="Project Area Map"
-                    />
-                    <div class="content">
-                      <h6>Route 5</h6>
-                      <span class="arrow-btn">Enlarge (.PDF)</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="open-house">
-      <div class="container">
-        <div class="row image-text">
-          <div class="col-xs-12 col-md-6 col-lg-5 text">
-            <h2>We want to hear from you</h2>
-            <p>
-              We invite you to join our upcoming virtual community open house to learn more about the project and
-              provide your feedback. Our community open house will include a virtual tour followed by a live discussion.
-              The virtual tour will exhibit project panels and an opportunity to contribute your input.
-            </p>
-            <a
-              href="https://ddei5-0-ctp.trendmicro.com/wis/clicktime/v1/query?url=http%3a%2f%2fwww.SCTL%2dVirtualRoom.com&umid=5B0917C3-D694-CC05-9DAC-FD5632B0F096&auth=7c4ba316753dc19277b4cd0bdedce6f0c8e9311b-840a5b55ed468b4836c4baf6c38f2414feadb855"
-              class="btn btn-primary"
-              >Enter Virtual Tour</a
-            >
-          </div>
-          <div class="col-xs-12 col-md-6 col-lg-7 image">
-            <img
-              src="/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/iStock-1058773298.jpg"
-              alt="Community members talking amongst each other."
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <!-- <p>To participate in the live discussions on Wednesday, March 9, 2022 and Thursday, March 10, 2022 from 7 – 8 p.m. EST, <a href="https://Hydroonemeeting.ca" target="_blank">register here</a> to view the presentation and speak with our project team members. You may also call <a href="tel:1-800-851-2595">1-800-851-2595</a> to listen to the presentation.</p> -->
-            <p>
-              To submit a question in advance, please email
-              <a href="mailto:Community.Relations@HydroOne.com">Community.Relations@HydroOne.com</a>
-            </p>
-            <!-- <div class="button-date">
-                    <a href="https://Hydroonemeeting.ca" target="_blank" class="btn btn-primary">Register for Live Discussions</a>
-                    <div class="date">March 9 & 10 | 7 - 8 EST</div>
-                    </div> -->
-            <p>
-              We want to hear from you during the environmental assessment process so we can design and build a line
-              that respects the interests and needs of your community. We will continue to pan opportunities to engage
-              with communities through the project.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="small-consultation">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xs-12 col-md-10">
-            <div class="content">
-              <h3>Public Consultation</h3>
-              <div class="list-item">
-                <h4>Notice of Commencement</h4>
-                <p>February 2022</p>
-                <div class="btn-group">
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/HONI_St_Clair_Notice_Feb_8.pdf"
-                    target="_blank"
-                    class="arrow-btn"
-                    >Download the Notice of Commencement</a
-                  >
-                  <a
-                    href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/HONI_St_Clair_Ad_Feb_8.pdf"
-                    target="_blank"
-                    class="arrow-btn"
-                    >Download the Newspaper Ad</a
-                  >
-                </div>
-              </div>
-              <div class="list-item">
-                <h4>Virtual Community Open House & Live Discussion Video Recordings</h4>
-                <p>March 2022</p>
-                <div class="btn-group">
-                  <a
-                    href="https://clientfiles.primecontact.ca/mavis/20220309-HydroOne-VTH-EventVideo.mp4"
-                    title="Click to watch the video recording of this event"
-                    target="_blank"
-                    class="arrow-btn"
-                    >Wednesday, March 9th, 2022</a
-                  >
-                  <a
-                    href="https://clientfiles.primecontact.ca/mavis/20220310-Hydro-One-VTH-EventVideo.mp4"
-                    title="Click to watch the video recording of this event"
-                    target="_blank"
-                    class="arrow-btn"
-                    >Thursday, March 10th, 2022</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="timeline">
-      <svg id="circle" width="235" height="430" viewBox="0 0 235 430" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="215" r="215" fill="#005B66" fill-opacity="0.025" />
-      </svg>
+        <div class="contact-info">
+          <h3>We're here to help you!</h3>
+          <strong>
+            Hydro One’s Community Relations
 
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Anticipated Project Schedule</h2>
+            <a href="mailto:Community.Relations@HydroOne.com">Community.Relations@HydroOne.com</a><br />
+            <a href="tel:+1-877-345-6799">1-877-345-6799</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="assets/images/manby-masthead.jpg" alt="Mother and son watching TV together." />
+    </div>
+  </section>
+  <section id="intro">
+    <img
+      src="https://www.hydroone.com/abouthydroone/CorporateInformation/majorprojects/saint-clair/PublishingImages/planning.jpg"
+      alt="Mother and daughter using a tablet." />
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 pull-right">
+          <div class="content">
+            <h2>Planning Process</h2>
+            <p>
+              Minimizing the impact of our projects and operations on the environment and community is important to
+              us. Planning will follow the “Class Environmental Assessment for Minor Transmission Facilities” (Class
+              EA, 2022), in accordance with the Ontario Environmental Assessment Act. This planning process applies to
+              transmission infrastructure projects that are carried out routinely and have predictable environmental
+              effects that can be readily managed.
+            </p>
+            <p>
+              Following completion of the Class EA, approval from the Ontario Energy Board under Section 92 (Leave to
+              Construct) of the Ontario Energy Board Act will be required. The in-service date for this project is
+              anticipated for 2026.
+              <a class="custom-link" href="#">Class Environmental Assessment for Minor Transmission Facilities</a>.
+            </p>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-xs-12 col-md-10 col-lg-8">
-            <div class="timeline">
-              <div class="milestone">
-                <div class="date">February<br />2022</div>
-                <div class="description">Notice of Commencement</div>
-              </div>
-              <div class="milestone">
-                <div class="date">February/March<br />2022</div>
-                <div class="description">Virtual Community Open House #1; Introduction of Project</div>
-              </div>
-              <div class="milestone current">
-                <div class="date">Fall<br />2022</div>
-                <div class="description">Community Open House #2; Update on Project</div>
-              </div>
-              <div class="milestone">
-                <div class="date">Spring<br />2023</div>
-                <div class="description">Community Open House #3; Selection of Preferred Route</div>
-              </div>
-              <div class="milestone">
-                <div class="date">Fall<br />2023</div>
-                <div class="description">
-                  Release of draft Environmental Study Report (ESR); Report for 30-day review period
-                </div>
-              </div>
-              <div class="milestone">
-                <div class="date">Late<br />2023</div>
-                <div class="description">Submit final ESR and complete the Class EA process</div>
-              </div>
-              <div class="milestone">
-                <div class="date">Fall<br />2025</div>
-                <div class="description">Expected Leave to Construct (Section 92) Application Approval</div>
-              </div>
-              <div class="milestone">
-                <div class="date">Spring<br />2027</div>
-                <div class="description">Proposed Construction Start</div>
-              </div>
-              <div class="milestone">
-                <div class="date">2028</div>
-                <div class="description">Proposed Line in-service</div>
-              </div>
+      </div>
+    </div>
+  </section>
+  <svg id="circle" width="300" height="300" viewBox="0 0 235 430" fill="none" xmlns="http://www.w3.org/2000/svg"
+    style="position: absolute; margin-top: 10rem">
+    <circle cx="-100" cy="200" r="215" fill="#FEFFD7" fill-opacity="0.2" />
+  </svg>
+  <section id="map">
+    <!-- <svg id="square" width="240" height="447" viewBox="0 0 240 447" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="163.5" width="327" height="327" transform="rotate(-30 0 163.5)" fill="#E3F7F1" fill-opacity="0.25" />
+    </svg> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Map of Project Area </h2>
+          <div class="d-flex">
+            <img src="assets/images/project-map.jpg" alt="">
+            <a href="https://ddei5-0-ctp.trendmicro.com/wis/clicktime/v1/query?url=https%3a%2f%2furldefense.proofpoint.com%2fv2%2furl%3fu%3dhttps%2d3A%5f%5fexperience.arcgis.com%5fexperience%5f770b90c559ad4619a186d955bf8798b1%5f%26d%3dDwMGaQ%26c%3dJnLCALisrKxQZnQdpANaBZUceEgEGD7wjEyj%5f%5f0JcDA%26r%3dqYWz5lbZQRosta0bOhjfNWcF2z2J0Lx9Sea3yKdpwMA%26m%3dARqWOAOISTAW4zpBpx3lXbdMuDWDrxPjqzGhlcDV%5fV851C4cc0xMqtY%2dAYTmnBEs%26s%3dynqOS7rsx1TlBA9HyI2S9A97yp%5fBMC47tf1x0thn9Jk%26e%3d&umid=79BD9062-D797-5305-9026-F621CFAC31D6&auth=7c4ba316753dc19277b4cd0bdedce6f0c8e9311b-b40439fa9a1e69bdd9f08fdea9aeac38da552a5d"
+              target="_blank" class="arrow-btn">Enlarge (.PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="be-heard">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-10 col-lg-8 pull-right">
+          <div class="content">
+            <h2>We Want to Hear From You</h2>
+            <p>
+              Feedback from residents, interest groups, elected officials, and Indigenous communities will be used to
+              inform all
+              aspects of the Class EA, the project, and how we create a vision for the corridor.
+            </p>
+            <p>
+              We invite you to join our upcoming in-person and virtual Community Open Houses to learn more about the
+              project, ask our
+              team questions and provide feedback. Information on additional opportunities to get involved will be
+              shared throughout
+              the summer.
+            </p>
+            <div class="cta-listen">
+              <p class="listen-text">Let us know you will attend an upcoming meeting</p>.
+              <a href="#" target="_blank" class="btn-register arrow-btn-white">
+                Register Now
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <img src="assets/images/listen.jpg" alt="Mother and daughter using a tablet." />
+  </section>
 
-    <script>
-      jQuery(document).ready(function ($) {
-        $('#accordion')
-          .find('.accordion-toggle')
-          .click(function () {
-            //Expand or collapse this panel
-            $(this).next().slideToggle('fast');
-            $(this).toggleClass('active');
-            $(this).next().toggleClass('active');
-            //Hide the other panels
-            $('.accordion-content').not($(this).next()).slideUp('fast');
-            $('.accordion-toggle').not($(this)).removeClass('active');
-            $('.accordion-content').not($(this).next()).removeClass('active');
-          });
-        // $('#accordion .accordion-toggle:first-of-type').trigger("click");
-      });
-    </script>
-  </body>
+
+  <section id="consultation">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="notice">
+          <h3>Public Consultation</h3>
+          <h4>Notice of Commencement</h4>
+          <p>June 2022</p>
+          <a href="/abouthydroone/CorporateInformation/majorprojects/saint-clair/Documents/HONI_St_Clair_Notice_Feb_8.pdf"
+            target="_blank" class="arrow-btn notice-btn">Download the Notice of Commencement</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <section id="timeline">
+    <svg id="square" width="240" height="447" viewBox="0 0 240 447" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; right: 0;">
+      <rect y="163.5" width="327" height="327" transform="rotate(-30 0 163.5)" fill="#005B66" fill-opacity="0.025" />
+    </svg>
+    <!-- <svg id="circle" width="235" height="430" viewBox="0 0 235 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="215" r="215" fill="#005B66" fill-opacity="0.025" />
+    </svg> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Anticipated Project Schedule</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-10 col-lg-9">
+          <div class="timeline">
+            <div class="milestone">
+              <div class="date">June<br />2022</div>
+              <div class="description">Notice of Commencement</div>
+            </div>
+            <div class="milestone">
+              <div class="date">July<br />2022</div>
+              <div class="description">Round 1 of Community Open Houses</div>
+            </div>
+            <div class="milestone current">
+              <div class="date">Fall<br />2022</div>
+              <div class="description">Round 2 of Community Open Houses</div>
+            </div>
+            <div class="milestone">
+              <div class="date">Winter<br />2023</div>
+              <div class="description">Release of draft Environmental Study Report (ESR); Report for 30-day review
+                period</div>
+            </div>
+            <div class="milestone">
+              <div class="date">Spring<br />2023</div>
+              <div class="description">
+                Submit final ESR and complete the Class EA process
+                <br>
+                Expected Leave to Construct (Section 92) Application Approval
+              </div>
+            </div>
+            <div class="milestone">
+              <div class="date">Summer/Fall<br />2023</div>
+              <div class="description">Round 3 of Community Open Houses</div>
+            </div>
+            <div class="milestone">
+              <div class="date">Early<br />2024</div>
+              <div class="description">Proposed Construction Start</div>
+            </div>
+            <div class="milestone">
+              <div class="date">2026</div>
+              <div class="description">Proposed Line in-service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-wrapper">
+        <div class="cta-bottom">
+          <h2>We're here to help you</h2>
+          <p>Contact Hydro One’s Community Relations team</p>
+          <a href="#">Community.Relations@HydroOne.com</a>
+          <a href="tel:+14163456799">416-345-3699</a>
+        </div>
+        <p style="font-size:1.5rem; font-weight: 600">NOTE: All dates are anticipated and could change based on project
+          feedback.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+</body>
+
 </html>

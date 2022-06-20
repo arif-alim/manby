@@ -15,26 +15,16 @@
   --regular: 'Roobert-Regular', sans-serif;
   --regularItalic: 'Roobert-RegularItalic', sans-serif;
 }
-
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-size: 62.5%;
   height: 100%;
 }
-
 body {
-  font-family: var(--regular);
   line-height: 1.6;
   color: var(--text);
-  font-size: 1.6 rem;
   margin: 0 auto;
 }
-
 h1,
 h2,
 h3,
@@ -44,50 +34,35 @@ h6 {
   line-height: 1.2;
   margin-top: 0;
 }
-
 p {
   line-height: 1.6 !important;
   font-family: var(--regular);
   font-size: 1.6rem;
 }
-
 strong {
   font-weight: 700;
 }
-
 a {
-  font-weight: bold;
   text-decoration: none;
-  font-size: 1.6rem;
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 #hero {
   margin-bottom: 4rem;
 }
-
 .hero-image img {
   width: 200%;
   height: 100%;
   object-fit: cover;
   object-position: right center;
 }
-
 .hero-text {
   background-color: #005866;
   padding: 2.5rem;
   color: white;
 }
-
 .hero-text > h1 {
   font-size: 3.6rem;
   margin-bottom: 3rem;
 }
-
 .hero-text > h2 {
   font-size: 2.4rem;
   margin-bottom: 2.5rem;
@@ -100,35 +75,29 @@ Virtual Community Open House Card
   padding: 1.5rem 2.5rem;
   margin-top: 5rem;
 }
-
 .ohcards {
   display: flex;
   flex-flow: column wrap;
   gap: 2.6rem;
 }
-
 .ohcard {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   background-color: var(--mint);
 }
-
 .ohcard-text {
   padding: 2rem 2.5rem;
   text-align: center;
 }
-
 .ohcard-text > h3 {
   font-size: 1.85rem;
   margin-top: 1rem;
   font-weight: var(--bold);
 }
-
 .ohcard p {
   font-size: 1.5rem;
 }
-
 .ohcard a {
   color: #005866;
   font-size: 1.6rem;
@@ -145,13 +114,11 @@ Community Walk Card
   padding: 1.5rem 2.5rem;
   margin-top: 5rem;
 }
-
 .wkcards {
   display: flex;
   flex-flow: column wrap;
   gap: 2.6rem;
 }
-
 .wkcard {
   display: flex;
   flex-direction: column;
@@ -161,20 +128,16 @@ Community Walk Card
   padding: 2rem 2.5rem;
   gap: 1.5rem;
 }
-
 div.wkcards > article:nth-of-type(odd) {
   background-color: rgba(250, 250, 250, 0.9);
 }
-
 .wkcard h2 {
   margin-top: 1rem;
   font-weight: var(--bold);
 }
-
 .wkcard p {
   font-size: 1.5rem;
 }
-
 .wkcard a {
   color: white;
   font-size: 1.6rem;
@@ -183,19 +146,16 @@ div.wkcards > article:nth-of-type(odd) {
   background-color: #005866;
   text-align: center;
 }
-
 .wkcard-img {
   max-width: 960px;
   height: 204px;
 }
-
 .wkcard-img img {
   object-fit: cover;
   object-position: center center;
   width: 100%;
   height: 100%;
 }
-
 .wkcard h3 {
   margin-bottom: 0;
   font-size: 2.2rem;
@@ -209,13 +169,11 @@ Community Workshops Card
   padding: 1.5rem 2.5rem;
   margin-top: 5rem;
 }
-
 .wscards {
   display: flex;
   flex-flow: column wrap;
   gap: 2.6rem;
 }
-
 .wscard {
   display: flex;
   flex-direction: column;
@@ -225,20 +183,16 @@ Community Workshops Card
   padding: 2rem 2.5rem;
   gap: 1.5rem;
 }
-
 div.wscards > article:nth-of-type(odd) {
   background-color: rgba(250, 250, 250, 0.9);
 }
-
 .wscard h3 {
   margin-top: 1rem;
   font-weight: var(--bold);
 }
-
 .wscard p {
   font-size: 1.5rem;
 }
-
 .wscard a {
   color: white;
   font-size: 1.6rem;
@@ -246,18 +200,15 @@ div.wscards > article:nth-of-type(odd) {
   background-color: #005866;
   text-align: center;
 }
-
 .wscard-img {
   height: 204px;
 }
-
 .wscard-img img {
   object-fit: cover;
   object-position: center center;
   width: 100%;
   height: 100%;
 }
-
 .wscard h3 {
   margin-bottom: 0;
   font-size: 2.2rem;
@@ -275,14 +226,15 @@ Call to Action - We're here to help you
   padding: 1.5rem 2.5rem 2.5rem;
   text-align: center;
 }
-
 #cta h2 {
   margin: 1.5rem 0;
 }
-
 #cta p,
 #cta a {
   margin-bottom: 0;
+}
+#cta a {
+  font-family: 'Roobert-Semibold', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -296,7 +248,6 @@ Accessibility
   width: 1px;
   overflow: hidden;
 }
-
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
@@ -330,7 +281,6 @@ Accessibility
   color: white !important;
   background-color: #005866;
 }
-
 .arrow-btn:after {
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23005866' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   border: none;
@@ -343,11 +293,9 @@ Accessibility
   content: ' ';
   margin-left: 1.2rem;
 }
-
 .arrow-btn.white:after {
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
-
 .arrow-btn:hover:after {
   transform: translateX(10px);
 }
@@ -357,7 +305,6 @@ Accessibility
   #hero {
     position: relative;
   }
-
   .hero-text {
     width: 100%;
     max-width: 656px;
@@ -365,12 +312,10 @@ Accessibility
     top: -38rem;
     right: 0;
   }
-
   .hero-image {
     width: 100%;
     max-width: 1073px;
   }
-
   #hero img {
     object-fit: cover;
   }
@@ -387,55 +332,44 @@ Accessibility
     flex-flow: row nowrap;
     gap: 1rem;
   }
-
   .ohcards > * {
     flex: 1 0;
   }
-
   .wkcards {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
   }
-
   .wkcards > * {
     flex-grow: 1;
     max-width: 48.5%;
   }
-
   .wkcard {
     flex-basis: 100%;
   }
-
   .wkcard-img {
     width: 100%;
     height: auto;
   }
-
   .wscards {
     display: flex;
     flex-flow: row nowrap;
     gap: 2.6rem;
   }
-
   .wscards > * {
     flex: 1 0 30%;
   }
-
   .wscard-img {
     width: 100%;
     height: auto;
   }
-
   .wscard-img img {
     object-fit: cover;
     object-position: center center;
   }
-
   #hero {
     position: relative;
   }
-
   .hero-text {
     width: 100%;
     max-width: 558px;
@@ -444,13 +378,11 @@ Accessibility
     right: 0;
     z-index: 4;
   }
-
   .hero-image {
     width: 100%;
     height: 500px;
     z-index: 1;
   }
-
   #hero img {
     object-fit: cover;
     object-position: left bottom;

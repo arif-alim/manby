@@ -106,6 +106,12 @@ Virtual Community Open House Card
   text-decoration: none;
 }
 
+.ohcard a.oh-link {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
 /*--------------------------------------------------------------
 Community Walk Card
 --------------------------------------------------------------*/

@@ -8,12 +8,12 @@
   --off: #fafafa;
   --vibrant: #6ed7b7;
   --yellow: #ffdd00;
-  --bold: 'RoobertTRIAL-Bold', sans-serif;
-  --boldItalic: 'RoobertTRIAL-BoldItalic', sans-serif;
-  --semiBold: 'RoobertTRIAL-SemiBold', sans-serif;
-  --semiBoldItalic: 'RoobertTRIAL-SemiBoldItalic', sans-serif;
-  --regular: 'RoobertTRIAL-Regular', sans-serif;
-  --regularItalic: 'RoobertTRIAL-RegularItalic', sans-serif;
+  --bold: 'Roobert-Bold', sans-serif;
+  --boldItalic: 'Roobert-BoldItalic', sans-serif;
+  --semi: 'Roobert-SemiBold', sans-serif;
+  --semiItalic: 'Roobert-SemiBoldItalic', sans-serif;
+  --regular: 'Roobert-Regular', sans-serif;
+  --regularItalic: 'Roobert-RegularItalic', sans-serif;
 }
 
 * {
@@ -23,7 +23,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: scroll;
   font-size: 62.5%;
   height: 100%;
 }
@@ -48,7 +47,7 @@ h6 {
 
 p {
   line-height: 1.6 !important;
-  font-family: 'RoobertTrial-Regular';
+  font-family: var(--regular);
   font-size: 1.6rem;
 }
 
@@ -72,10 +71,10 @@ img {
 }
 
 .hero-image img {
-  width: 100%;
-  height: 300px;
+  width: 200%;
+  height: 100%;
   object-fit: cover;
-  object-position: center left;
+  object-position: right center;
 }
 
 .hero-text {
@@ -105,7 +104,7 @@ Virtual Community Open House Card
 .ohcards {
   display: flex;
   flex-flow: column wrap;
-  gap: 3.6rem;
+  gap: 2.6rem;
 }
 
 .ohcard {
@@ -121,7 +120,7 @@ Virtual Community Open House Card
 }
 
 .ohcard-text > h3 {
-  font-size: 2.2rem;
+  font-size: 1.85rem;
   margin-top: 1rem;
   font-weight: var(--bold);
 }
@@ -131,11 +130,11 @@ Virtual Community Open House Card
 }
 
 .ohcard a {
-  color: white;
+  color: #005866;
   font-size: 1.6rem;
   padding: 1rem;
-  background-color: #005866;
   text-align: center;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -322,12 +321,14 @@ Accessibility
 /* btn with animated caret */
 
 .arrow-btn {
-  font-family: 'RoobertTRIAL-SemiBold';
+  font-family: var(--semi);
   font-size: 17px;
   text-decoration: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white !important;
+  background-color: #005866;
 }
 
 .arrow-btn:after {
@@ -347,10 +348,6 @@ Accessibility
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='%23FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
-.arrow-btn.white:hover {
-  color: #fff;
-}
-
 .arrow-btn:hover:after {
   transform: translateX(10px);
 }
@@ -367,20 +364,15 @@ Accessibility
     position: absolute;
     top: -38rem;
     right: 0;
-    z-index: 4;
   }
 
   .hero-image {
     width: 100%;
     max-width: 1073px;
-    height: 557px;
-    z-index: 1;
   }
 
   #hero img {
     object-fit: cover;
-    object-position: left bottom;
-    height: 100%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -393,19 +385,22 @@ Accessibility
   .ohcards {
     display: flex;
     flex-flow: row nowrap;
+    gap: 1rem;
   }
 
   .ohcards > * {
-    flex-grow: 1;
+    flex: 1 0;
   }
 
   .wkcards {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
   }
 
   .wkcards > * {
-    max-width: 48%;
+    flex-grow: 1;
+    max-width: 48.5%;
   }
 
   .wkcard {

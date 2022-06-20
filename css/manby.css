@@ -17,7 +17,6 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 body {
@@ -56,7 +55,7 @@ body {
   opacity: 1;
 }
 .arrow-btn {
-  font-family: 'RoobertTRIAL-SemiBold';
+  font-family: var(--semi);
   font-size: 17px;
   text-decoration: none !important;
   display: flex;
@@ -112,14 +111,14 @@ strong {
 }
 
 p a {
-  font-family: 'RoobertTRIAL-SemiBold';
+  font-family: var(--semi);
   text-decoration: underline;
 }
 
 #banner {
   background-color: #ffdd00;
   padding: 0.75rem 0;
-  font-family: 'RoobertTRIAL-SemiBold';
+  font-family: var(--semi);
 }
 #banner p {
   margin: 0;
@@ -179,9 +178,10 @@ p a {
 }
 
 #masthead .image img {
-  width: 100%;
+  width: 160%;
   height: 100%;
   object-fit: cover;
+  object-position: bottom right;
 }
 #masthead p a {
   color: #fff;
@@ -583,7 +583,7 @@ p a {
   }
 
   .contact-info {
-    margin-bottom: 12rem;
+    margin-bottom: 2rem;
   }
 
   #masthead .row {
@@ -966,7 +966,7 @@ p a {
 /* light version of the button with arrow */
 
 .arrow-btn-white {
-  font-family: 'RoobertTRIAL-SemiBold';
+  font-family: var(--semi);
   font-size: 1.8rem;
   text-decoration: none !important;
   display: flex;
